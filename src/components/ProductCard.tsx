@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Instagram, Facebook, Bot } from "lucide-react";
+import { MessageCircle, Instagram, Facebook, MessageSquare } from "lucide-react";
 
 interface ProductCardProps {
   title: string;
@@ -16,17 +16,17 @@ export const ProductCard = ({ title, subtitle, description, price, image, catego
     const message = `Hola! Estoy interesado en ${title} - ${subtitle}. ¿Podrían darme más información?`;
     
     switch (platform) {
-      case 'whatsapp':
-        window.open(`https://wa.me/1234567890?text=${encodeURIComponent(message)}`, '_blank');
-        break;
       case 'facebook':
-        window.open('https://m.me/kitsonkit', '_blank');
-        break;
-      case 'instagram':
-        window.open('https://ig.me/m/kitsonkit', '_blank');
+        window.open('https://www.facebook.com/share/19pGami7Ab/', '_blank');
         break;
       case 'discord':
-        window.open('https://discord.gg/kitsonkit', '_blank');
+        window.open('https://discord.gg/gPumDeNvp6', '_blank');
+        break;
+      case 'instagram':
+        window.open('https://www.instagram.com/kitsonkit2.0?igsh=ZjNlaGcyaGp4ZnM5', '_blank');
+        break;
+      case 'whatsapp':
+        window.open('https://wa.me/573156098437', '_blank');
         break;
     }
   };
@@ -65,9 +65,9 @@ export const ProductCard = ({ title, subtitle, description, price, image, catego
               variant="gaming" 
               size="sm" 
               className="flex-1"
-              onClick={() => handleContact('discord')}
+              onClick={() => handleContact('facebook')}
             >
-              <Bot className="w-4 h-4" />
+              <Facebook className="w-4 h-4" />
               Comprar
             </Button>
             
@@ -75,9 +75,9 @@ export const ProductCard = ({ title, subtitle, description, price, image, catego
               <Button 
                 variant="social" 
                 size="sm"
-                onClick={() => handleContact('facebook')}
+                onClick={() => handleContact('discord')}
               >
-                <Facebook className="w-4 h-4" />
+                <MessageSquare className="w-4 h-4" />
               </Button>
               <Button 
                 variant="social" 
@@ -85,6 +85,13 @@ export const ProductCard = ({ title, subtitle, description, price, image, catego
                 onClick={() => handleContact('instagram')}
               >
                 <Instagram className="w-4 h-4" />
+              </Button>
+              <Button 
+                variant="social" 
+                size="sm"
+                onClick={() => handleContact('whatsapp')}
+              >
+                <MessageCircle className="w-4 h-4" />
               </Button>
             </div>
           </div>
