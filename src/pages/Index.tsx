@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Header } from "@/components/Header";
 import { ProductCard } from "@/components/ProductCard";
 import { ReviewCard } from "@/components/ReviewCard";
 import { ContactSection } from "@/components/ContactSection";
@@ -80,6 +81,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Header */}
+      <Header />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div 
@@ -89,8 +92,16 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-transparent"></div>
         </div>
         
-        <div className="relative z-10 container mx-auto px-4 text-center">
+        <div className="relative z-10 container mx-auto px-4 text-center pt-16">
           <div className="max-w-4xl mx-auto animate-fade-in">
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <img 
+                src="/lovable-uploads/3869feb0-7ccb-431c-95b7-53b04dbb7fdf.png" 
+                alt="Kitson Kit Logo" 
+                className="w-16 h-16 md:w-20 md:h-20 rounded-full animate-float"
+              />
+            </div>
+            
             <h1 className="text-6xl md:text-8xl font-bold text-foreground mb-6">
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 Kitson Kit
@@ -159,7 +170,7 @@ const Index = () => {
       </section>
 
       {/* Reviews Section */}
-      <section className="py-20 bg-background">
+      <section id="reseñas" className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -189,16 +200,25 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <ContactSection />
+      <div id="contacto">
+        <ContactSection />
+      </div>
 
       {/* Footer */}
       <footer className="bg-muted py-12">
         <div className="container mx-auto px-4 text-center">
-          <div className="mb-8">
-            <h3 className="text-2xl font-bold text-foreground mb-2">Kitson Kit</h3>
-            <p className="text-muted-foreground">
-              Tu tienda de confianza para productos digitales gaming
-            </p>
+          <div className="flex items-center justify-center gap-3 mb-8">
+            <img 
+              src="/lovable-uploads/3869feb0-7ccb-431c-95b7-53b04dbb7fdf.png" 
+              alt="Kitson Kit Logo" 
+              className="w-12 h-12 rounded-full"
+            />
+            <div>
+              <h3 className="text-2xl font-bold text-foreground">Kitson Kit</h3>
+              <p className="text-muted-foreground">
+                Tu tienda de confianza para productos digitales gaming
+              </p>
+            </div>
           </div>
           
           <div className="border-t border-border pt-8">
