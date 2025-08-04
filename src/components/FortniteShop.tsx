@@ -11,8 +11,13 @@ interface FortniteItem {
   displayType: string;
   mainType: string;
   offerId: string;
-  regularPrice: number;
-  finalPrice: number;
+  regularPrice?: number;
+  finalPrice?: number;
+  price?: {
+    regularPrice: number;
+    finalPrice: number;
+    floorPrice: number;
+  };
   banner: string | null;
   granted: Array<{
     id: string;
@@ -115,9 +120,10 @@ export const FortniteShop = () => {
   };
 
   const handlePurchase = (item: FortniteItem) => {
+    const price = item.price?.finalPrice ?? item.finalPrice ?? 0;
     toast({
       title: "¡Contacta para comprar!",
-      description: `Producto: ${item.displayName} - ${item.finalPrice} V-Bucks`,
+      description: `Producto: ${item.displayName} - ${price > 0 ? price + ' V-Bucks' : 'Gratis'}`,
     });
   };
 
@@ -157,7 +163,7 @@ export const FortniteShop = () => {
   const featuredItems = shopData.shop.filter(item => 
     (item.layout && item.layout.category === 'Featured') || 
     (item.tile && item.tile.category === 'Featured') ||
-    item.finalPrice >= 800 // Lowered threshold to show more items
+    (item.price?.finalPrice ?? item.finalPrice ?? 0) >= 800 // Lowered threshold to show more items
   ).slice(0, 12); // Show more items
   
   // If no featured items, show first 12 items from shop
@@ -187,6 +193,8 @@ export const FortniteShop = () => {
           {itemsToShow.map((item) => {
             const mainItem = item.granted[0];
             const rarity = mainItem?.rarity?.name || 'common';
+            const finalPrice = item.price?.finalPrice ?? item.finalPrice ?? 0;
+            const regularPrice = item.price?.regularPrice ?? item.regularPrice ?? finalPrice;
             const itemImage = item.displayAssets?.[0]?.url || 
                             item.newDisplayAsset?.materialInstances?.[0]?.images?.OfferImage ||
                             mainItem?.images?.featured || 
@@ -236,18 +244,18 @@ export const FortniteShop = () => {
                       {item.displayDescription || mainItem?.description}
                     </p>
                     
-                    <div className="flex items-center justify-between pt-2">
-                      <div className="text-center">
-                        <p className="text-lg font-bold text-primary">
-                          {item.finalPrice.toLocaleString()} V-Bucks
-                        </p>
-                        {item.regularPrice !== item.finalPrice && (
-                          <p className="text-xs text-muted-foreground line-through">
-                            {item.regularPrice.toLocaleString()}
-                          </p>
-                        )}
-                      </div>
-                    </div>
+                     <div className="flex items-center justify-between pt-2">
+                       <div className="text-center">
+                         <p className="text-lg font-bold text-primary">
+                           {finalPrice > 0 ? finalPrice.toLocaleString() : 'Gratis'} {finalPrice > 0 ? 'V-Bucks' : ''}
+                         </p>
+                         {regularPrice !== finalPrice && regularPrice > 0 && (
+                           <p className="text-xs text-muted-foreground line-through">
+                             {regularPrice.toLocaleString()}
+                           </p>
+                         )}
+                       </div>
+                     </div>
                     
                     <Button 
                       onClick={() => handlePurchase(item)}
