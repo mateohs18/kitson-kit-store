@@ -161,7 +161,7 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-background/95"></div>
         </div>
         
-        <div className="relative z-10 container mx-auto px-4 text-center" style={{ backgroundColor: '#D2D2D2' }}>
+        <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto animate-fade-in">
             <div className="flex items-center justify-center gap-4 mb-6 mt-16">
               <img src="/lovable-uploads/3869feb0-7ccb-431c-95b7-53b04dbb7fdf.png" alt="Kitson Kit Logo" className="w-16 h-16 md:w-20 md:h-20 rounded-full animate-float" />
@@ -181,24 +181,24 @@ const Index = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
-              <Button variant="gaming" size="xl" onClick={scrollToProducts} className="min-w-[200px]">
+              <Button variant="professional" size="xl" onClick={scrollToProducts} className="min-w-[200px] shadow-lg">
                 <Zap className="w-5 h-5" />
                 Ver Productos
               </Button>
-              <Button variant="secondary" size="xl" className="min-w-[200px]">
+              <Button variant="elegant" size="xl" className="min-w-[200px]">
                 <Shield className="w-5 h-5" />
                 ¿Por qué elegirnos?
               </Button>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-card/50 backdrop-blur-sm border border-border rounded-lg p-6 animate-float">
+              <div className="bg-card/70 backdrop-blur-sm border border-border rounded-xl p-8 animate-float hover:shadow-lg transition-all duration-300">
                 <Shield className="w-12 h-12 text-primary mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-foreground mb-2">100% Seguro</h3>
                 <p className="text-muted-foreground text-sm">Métodos legales, garantía total</p>
               </div>
               
-              <div className="bg-card/50 backdrop-blur-sm border border-border rounded-lg p-6 animate-float" style={{
+              <div className="bg-card/70 backdrop-blur-sm border border-border rounded-xl p-8 animate-float hover:shadow-lg transition-all duration-300" style={{
               animationDelay: '0.2s'
             }}>
                 <Zap className="w-12 h-12 text-accent mx-auto mb-4" />
@@ -206,7 +206,7 @@ const Index = () => {
                 <p className="text-muted-foreground text-sm">Productos en minutos</p>
               </div>
               
-              <div className="bg-card/50 backdrop-blur-sm border border-border rounded-lg p-6 animate-float" style={{
+              <div className="bg-card/70 backdrop-blur-sm border border-border rounded-xl p-8 animate-float hover:shadow-lg transition-all duration-300" style={{
               animationDelay: '0.4s'
             }}>
                 <Users className="w-12 h-12 text-secondary mx-auto mb-4" />
@@ -264,7 +264,7 @@ const Index = () => {
             <div className="space-y-8">
               <div className="flex items-center gap-4 mb-8">
                 <Button
-                  variant="outline"
+                  variant="elegant"
                   onClick={() => setSelectedCategory(null)}
                   className="flex items-center gap-2"
                 >
@@ -277,7 +277,7 @@ const Index = () => {
               </div>
               
               {selectedCategory === "FORTNITE" && (
-                <div className="bg-card border border-border rounded-lg p-6 mb-8">
+                <div className="bg-card/80 backdrop-blur-sm border border-border rounded-xl p-6 mb-8 shadow-sm">
                   <h4 className="text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
                     <Shield className="w-5 h-5 text-primary" />
                     ¿Qué es el Error de Región?

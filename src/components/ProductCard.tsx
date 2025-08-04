@@ -33,18 +33,18 @@ export const ProductCard = ({ title, subtitle, description, price, image, catego
   };
 
   return (
-    <Card className="bg-card border-border hover:border-primary/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl animate-fade-in group">
+    <Card className="bg-card/90 backdrop-blur-sm border-border hover:border-primary/30 transition-all duration-300 transform hover:scale-[1.02] hover:shadow-xl animate-fade-in group rounded-xl overflow-hidden">
       <CardContent className="p-0">
-        <div className="relative overflow-hidden rounded-t-lg">
+        <div className="relative overflow-hidden rounded-t-xl">
           <img 
             src={image} 
             alt={title}
             className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
           />
-          <div className="absolute top-3 left-3 bg-primary text-primary-foreground px-2 py-1 rounded-md text-xs font-semibold">
+          <div className="absolute top-3 left-3 bg-primary/90 backdrop-blur-sm text-primary-foreground px-3 py-1 rounded-lg text-xs font-semibold border border-primary/20">
             {category}
           </div>
-          <div className="absolute bottom-3 right-3 bg-accent text-accent-foreground px-2 py-1 rounded-md text-sm font-bold">
+          <div className="absolute bottom-3 right-3 bg-accent/90 backdrop-blur-sm text-accent-foreground px-3 py-1 rounded-lg text-sm font-bold border border-accent/20">
             {price}
           </div>
         </div>
@@ -61,9 +61,9 @@ export const ProductCard = ({ title, subtitle, description, price, image, catego
             {description}
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-2">
+          <div className="flex flex-col sm:flex-row gap-3 pt-2">
             <Button 
-              variant="gaming" 
+              variant="professional" 
               size="sm" 
               className="flex-1"
               onClick={() => handleContact('facebook')}
@@ -72,25 +72,28 @@ export const ProductCard = ({ title, subtitle, description, price, image, catego
               Comprar
             </Button>
             
-            <div className="flex gap-1">
+            <div className="flex gap-2">
               <Button 
-                variant="social" 
+                variant="elegant" 
                 size="sm"
                 onClick={() => handleContact('discord')}
+                className="px-3"
               >
                 <img src={discordIcon} alt="Discord" className="w-4 h-4 filter brightness-0 invert" />
               </Button>
               <Button 
-                variant="social" 
+                variant="elegant" 
                 size="sm"
                 onClick={() => handleContact('instagram')}
+                className="px-3"
               >
                 <Instagram className="w-4 h-4" />
               </Button>
               <Button 
-                variant="social" 
+                variant="elegant" 
                 size="sm"
                 onClick={() => handleContact('whatsapp')}
+                className="px-3"
               >
                 <MessageCircle className="w-4 h-4" />
               </Button>
