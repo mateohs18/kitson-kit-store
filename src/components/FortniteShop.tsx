@@ -180,37 +180,43 @@ export const FortniteShop = () => {
     );
   }
 
-  const featuredItems = shopData.shop.filter(item => 
-    (item.layout && item.layout.category === 'Featured') || 
-    (item.tile && item.tile.category === 'Featured') ||
-    (item.price?.finalPrice ?? item.finalPrice ?? 0) >= 800 // Lowered threshold to show more items
-  ).slice(0, 12); // Show more items
-  
-  // If no featured items, show first 12 items from shop
-  const itemsToShow = featuredItems.length > 0 ? featuredItems : shopData.shop.slice(0, 12);
-  
-  console.log('Featured items found:', featuredItems.length);
-  console.log('Items to show:', itemsToShow.length);
+  // Show all items from the shop, not just featured ones
+  const allItems = shopData.shop || [];
+  console.log('Total items in shop:', allItems.length);
 
   return (
-    <section className="py-20 bg-gradient-to-b from-background to-muted">
+    <section className="py-20 bg-gradient-to-b from-muted to-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Tienda Diaria de Fortnite
+            🎮 Tienda de Fortnite
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-4">
-            Los mejores skins y items disponibles hoy
+            Todos los skins, objetos y contenido disponible hoy en Fortnite
           </p>
           {shopData.lastUpdate && (
             <p className="text-sm text-muted-foreground">
-              Última actualización: {new Date(shopData.lastUpdate.date).toLocaleDateString('es-ES')}
+              Última actualización: {new Date(shopData.lastUpdate.date).toLocaleDateString('es-ES', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+              })}
             </p>
           )}
+          <div className="mt-4 flex items-center justify-center gap-4">
+            <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
+              {allItems.length} items disponibles
+            </span>
+            <Button onClick={fetchFortniteShop} variant="outline" size="sm">
+              🔄 Actualizar
+            </Button>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {itemsToShow.map((item) => {
+          {allItems.map((item) => {
             const mainItem = item.granted[0];
             
             // Debug logging to find the problematic object
