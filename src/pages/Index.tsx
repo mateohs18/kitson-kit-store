@@ -37,7 +37,7 @@ const Index = () => {
       title: "CLUB DE FORTNITE",
       subtitle: "Cuenta con Error",
       description: "Acceso completo al pase de batalla y contenido exclusivo. Método seguro sin riesgo para tu cuenta principal.",
-      price: "Desde $15",
+      price: "$5 USD • $105 MXN • 24 SOL • $24.000 COP",
       image: fortniteImage,
       category: "FORTNITE"
     }, {
