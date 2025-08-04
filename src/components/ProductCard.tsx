@@ -70,7 +70,7 @@ export const ProductCard = ({ title, subtitle, description, price, image, catego
               className="flex-1"
               onClick={() => handleContact('facebook')}
             >
-              <span className="w-4 h-4 text-center font-bold text-sm">F</span>
+              <img src={facebookIcon} alt="Facebook" className="w-4 h-4 filter brightness-0 invert" />
               Comprar
             </Button>
             
