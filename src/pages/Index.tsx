@@ -6,7 +6,7 @@ import { ContactSection } from "@/components/ContactSection";
 import { ReviewForm } from "@/components/ReviewForm";
 import { Shield, Zap, Users, Star, ArrowLeft } from "lucide-react";
 import { useState } from "react";
-import heroImage from "@/assets/hero-gaming.jpg";
+import heroImage from "@/assets/hero-professional.jpg";
 import fortniteImage from "@/assets/fortnite-product.jpg";
 import freefireImage from "@/assets/freefire-product.jpg";
 import minecraftImage from "@/assets/minecraft-product.jpg";
@@ -158,40 +158,40 @@ const Index = () => {
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
         backgroundImage: `url(${heroImage})`
       }}>
-          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-background/95"></div>
         </div>
         
-        <div className="relative z-10 container mx-auto px-4 text-center pt-16">
+        <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto animate-fade-in">
-            <div className="flex items-center justify-center gap-4 mb-6">
+            <div className="flex items-center justify-center gap-4 mb-8">
               <img src="/lovable-uploads/3869feb0-7ccb-431c-95b7-53b04dbb7fdf.png" alt="Kitson Kit Logo" className="w-16 h-16 md:w-20 md:h-20 rounded-full animate-float" />
             </div>
             
-            <h1 className="text-6xl md:text-8xl font-bold text-foreground mb-6">
+            <h1 className="text-6xl md:text-8xl font-bold text-foreground mb-8">
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 Kitson Kit
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
               Los mejores productos digitales para gaming. +3 años ofreciendo 
               <span className="text-accent font-semibold"> precios bajos</span>, 
               <span className="text-primary font-semibold"> atención premium</span> y 
               <span className="text-secondary font-semibold"> entrega rápida</span>.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Button variant="gaming" size="xl" onClick={scrollToProducts}>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
+              <Button variant="gaming" size="xl" onClick={scrollToProducts} className="min-w-[200px]">
                 <Zap className="w-5 h-5" />
                 Ver Productos
               </Button>
-              <Button variant="secondary" size="xl">
+              <Button variant="secondary" size="xl" className="min-w-[200px]">
                 <Shield className="w-5 h-5" />
                 ¿Por qué elegirnos?
               </Button>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-card/50 backdrop-blur-sm border border-border rounded-lg p-6 animate-float">
                 <Shield className="w-12 h-12 text-primary mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-foreground mb-2">100% Seguro</h3>
