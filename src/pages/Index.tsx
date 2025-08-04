@@ -6,9 +6,9 @@ import { Shield, Zap, Users, ArrowLeft, CheckCircle } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-professional.jpg";
-const fortniteImage = "/lovable-uploads/deaf7a90-011e-4ebf-8f94-15b2606530db.png";
-const freefireImage = "/lovable-uploads/2e7f57ec-2038-4990-b90a-f42ff5d2fe88.png";
-const minecraftImage = "/lovable-uploads/b140701b-1020-4a3e-a660-58e9b7ef1c5a.png";
+const fortniteImage = "/lovable-uploads/21320e0f-87f5-48a3-aedf-61ac568e15d9.png";
+const freefireImage = "/lovable-uploads/bdce0646-48a6-4b27-a7bc-42ca95f856b7.png";
+const minecraftImage = "/lovable-uploads/722d514e-f2e2-4266-9825-97d3b17af36b.png";
 const Index = () => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const categories = [{
