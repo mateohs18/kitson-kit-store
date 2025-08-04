@@ -1,10 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { ProductCard } from "@/components/ProductCard";
-import { ReviewCard } from "@/components/ReviewCard";
 import { ContactSection } from "@/components/ContactSection";
-import { ReviewForm } from "@/components/ReviewForm";
-import { Shield, Zap, Users, Star, ArrowLeft } from "lucide-react";
+import { Shield, Zap, Users, ArrowLeft, CheckCircle } from "lucide-react";
 import { useState } from "react";
 import heroImage from "@/assets/hero-professional.jpg";
 const fortniteImage = "/lovable-uploads/deaf7a90-011e-4ebf-8f94-15b2606530db.png";
@@ -124,22 +122,6 @@ const Index = () => {
     }
   ];
 
-  const reviews = [{
-    name: "Carlos M.",
-    rating: 5,
-    comment: "Excelente servicio! Recibí mis V-Bucks súper rápido y sin problemas. Definitivamente volveré a comprar.",
-    date: "Hace 2 días"
-  }, {
-    name: "Ana L.",
-    rating: 5,
-    comment: "La mejor experiencia comprando diamantes para Free Fire. Atención al cliente 10/10.",
-    date: "Hace 1 semana"
-  }, {
-    name: "Miguel R.",
-    rating: 5,
-    comment: "Llevo más de 6 meses comprando aquí. Siempre cumplen y con los mejores precios del mercado.",
-    date: "Hace 2 semanas"
-  }];
 
   const scrollToProducts = () => {
     document.getElementById('productos')?.scrollIntoView({
@@ -300,6 +282,64 @@ const Index = () => {
         </div>
       </section>
 
+      {/* About Us Section */}
+      <section id="quienes-somos" className="py-20 bg-gradient-to-b from-muted to-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+              Quienes Somos
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Bienvenido a Kitson Kit, tu centro de confianza para ¡Juegos, Servicios y Suscripciones! 🎮
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto space-y-12">
+            <div className="bg-card border border-border rounded-lg p-8 text-center">
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                Nos comprometemos a ofrecer un mercado seguro, confiable y agradable para nuestros clientes.
+                Contamos con referencias de ventas en Facebook e Instagram.
+              </p>
+            </div>
+
+            <div className="text-center mb-12">
+              <h3 className="text-3xl font-bold text-foreground mb-8">
+                Lo que Priorizamos
+              </h3>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-card border border-border rounded-lg p-8 animate-fade-in">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="p-3 bg-primary/10 rounded-full">
+                    <Shield className="w-8 h-8 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-foreground">🔒 Confianza y Seguridad</h4>
+                  </div>
+                </div>
+                <p className="text-muted-foreground leading-relaxed">
+                  Cada transacción se maneja de forma profesional y segura.
+                </p>
+              </div>
+
+              <div className="bg-card border border-border rounded-lg p-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="p-3 bg-accent/10 rounded-full">
+                    <Zap className="w-8 h-8 text-accent" />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-foreground">💎 Ofertas Exclusivas</h4>
+                  </div>
+                </div>
+                <p className="text-muted-foreground leading-relaxed">
+                  Obtén precios imbatibles en Juegos Servicios y Suscripciones para mejorar tu experiencia.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Contact Section */}
       <div id="contacto">

@@ -5,8 +5,8 @@ export const Header = () => {
     document.getElementById('productos')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const scrollToReviews = () => {
-    document.getElementById('reseñas')?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToAbout = () => {
+    document.getElementById('quienes-somos')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   const scrollToContact = () => {
@@ -39,10 +39,10 @@ export const Header = () => {
               Productos
             </button>
             <button 
-              onClick={scrollToReviews}
+              onClick={scrollToAbout}
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              Reseñas
+              Quienes Somos
             </button>
             <button 
               onClick={scrollToContact}
