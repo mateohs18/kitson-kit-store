@@ -91,7 +91,7 @@ const Index = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-              Los mejores productos digitales para gaming. +2 años ofreciendo 
+              Los mejores productos digitales para gaming. +3 años ofreciendo 
               <span className="text-accent font-semibold"> precios bajos</span>, 
               <span className="text-primary font-semibold"> atención premium</span> y 
               <span className="text-secondary font-semibold"> entrega rápida</span>.
@@ -200,7 +200,7 @@ const Index = () => {
           <div className="border-t border-border pt-8">
             <p className="text-muted-foreground text-sm">
               © 2024 Kitson Kit. Todos los derechos reservados. 
-              +2 años brindando el mejor servicio.
+              +3 años brindando el mejor servicio.
             </p>
           </div>
         </div>
