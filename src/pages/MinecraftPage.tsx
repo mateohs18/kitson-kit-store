@@ -5,7 +5,7 @@ import { ContactSection } from "@/components/ContactSection";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const minecraftImage = "/lovable-uploads/b140701b-1020-4a3e-a660-58e9b7ef1c5a.png";
+const minecraftImage = "/lovable-uploads/2e978da3-b905-4a47-a8bb-b06143f020b2.png";
 
 const MinecraftPage = () => {
   const minecraftProducts = [
