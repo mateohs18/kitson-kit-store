@@ -67,135 +67,462 @@ export const FortniteShop = () => {
         uid: "mock-data"
       },
       shop: [
+        // OUTFITS LEGENDARIOS
         {
-          mainId: "mock-1",
-          displayName: "Raven Outfit",
-          displayDescription: "Un outfit legendario oscuro y misterioso",
+          mainId: "travis-scott",
+          displayName: "Travis Scott",
+          displayDescription: "El icónico artista llega a Fortnite con su outfit exclusivo",
           displayType: "Outfit",
           mainType: "outfit",
-          offerId: "mock-offer-1",
+          offerId: "travis-scott-offer",
           price: { finalPrice: 2000, regularPrice: 2000, floorPrice: 2000 },
+          banner: "Icónico",
+          granted: [{
+            id: "travis-scott",
+            name: "Travis Scott",
+            description: "Outfit legendario",
+            rarity: { id: "legendary", name: "legendary" },
+            type: { id: "outfit", name: "Outfit" },
+            images: {
+              smallIcon: "https://media.fortniteapi.io/images/cosmetics/featured/featured.png",
+              icon: "https://media.fortniteapi.io/images/cosmetics/featured/featured.png",
+              featured: "https://media.fortniteapi.io/images/cosmetics/featured/featured.png"
+            }
+          }]
+        },
+        {
+          mainId: "john-wick",
+          displayName: "John Wick",
+          displayDescription: "El legendario asesino profesional",
+          displayType: "Outfit",
+          mainType: "outfit",
+          offerId: "john-wick-offer",
+          price: { finalPrice: 2000, regularPrice: 2000, floorPrice: 2000 },
+          banner: null,
+          granted: [{
+            id: "john-wick",
+            name: "John Wick",
+            description: "Outfit legendario",
+            rarity: { id: "legendary", name: "legendary" },
+            type: { id: "outfit", name: "Outfit" },
+            images: {
+              smallIcon: "https://media.fortniteapi.io/images/cosmetics/featured/johnwick.png",
+              icon: "https://media.fortniteapi.io/images/cosmetics/featured/johnwick.png",
+              featured: "https://media.fortniteapi.io/images/cosmetics/featured/johnwick.png"
+            }
+          }]
+        },
+        {
+          mainId: "batman",
+          displayName: "Batman Zero",
+          displayDescription: "El Caballero Oscuro de Gotham City",
+          displayType: "Outfit",
+          mainType: "outfit",
+          offerId: "batman-offer",
+          price: { finalPrice: 2000, regularPrice: 2000, floorPrice: 2000 },
+          banner: "DC Comics",
+          granted: [{
+            id: "batman",
+            name: "Batman Zero",
+            description: "Outfit legendario",
+            rarity: { id: "legendary", name: "legendary" },
+            type: { id: "outfit", name: "Outfit" },
+            images: {
+              smallIcon: "https://media.fortniteapi.io/images/cosmetics/featured/batman.png",
+              icon: "https://media.fortniteapi.io/images/cosmetics/featured/batman.png",
+              featured: "https://media.fortniteapi.io/images/cosmetics/featured/batman.png"
+            }
+          }]
+        },
+        {
+          mainId: "harley-quinn",
+          displayName: "Harley Quinn",
+          displayDescription: "La reina del caos de Gotham",
+          displayType: "Outfit",
+          mainType: "outfit",
+          offerId: "harley-offer",
+          price: { finalPrice: 1800, regularPrice: 2000, floorPrice: 1800 },
+          banner: "Oferta",
+          granted: [{
+            id: "harley-quinn",
+            name: "Harley Quinn",
+            description: "Outfit legendario",
+            rarity: { id: "legendary", name: "legendary" },
+            type: { id: "outfit", name: "Outfit" },
+            images: {
+              smallIcon: "https://media.fortniteapi.io/images/cosmetics/featured/harley.png",
+              icon: "https://media.fortniteapi.io/images/cosmetics/featured/harley.png",
+              featured: "https://media.fortniteapi.io/images/cosmetics/featured/harley.png"
+            }
+          }]
+        },
+        {
+          mainId: "spiderman",
+          displayName: "Spider-Man",
+          displayDescription: "Tu amigable vecino Spider-Man",
+          displayType: "Outfit",
+          mainType: "outfit",
+          offerId: "spiderman-offer",
+          price: { finalPrice: 2000, regularPrice: 2000, floorPrice: 2000 },
+          banner: "Marvel",
+          granted: [{
+            id: "spiderman",
+            name: "Spider-Man",
+            description: "Outfit legendario",
+            rarity: { id: "legendary", name: "legendary" },
+            type: { id: "outfit", name: "Outfit" },
+            images: {
+              smallIcon: "https://media.fortniteapi.io/images/cosmetics/featured/spiderman.png",
+              icon: "https://media.fortniteapi.io/images/cosmetics/featured/spiderman.png",
+              featured: "https://media.fortniteapi.io/images/cosmetics/featured/spiderman.png"
+            }
+          }]
+        },
+        
+        // OUTFITS ÉPICOS
+        {
+          mainId: "ninja",
+          displayName: "Ninja",
+          displayDescription: "El streamer más famoso del mundo",
+          displayType: "Outfit",
+          mainType: "outfit",
+          offerId: "ninja-offer",
+          price: { finalPrice: 1500, regularPrice: 1500, floorPrice: 1500 },
+          banner: "Creador de Contenido",
+          granted: [{
+            id: "ninja",
+            name: "Ninja",
+            description: "Outfit épico",
+            rarity: { id: "epic", name: "epic" },
+            type: { id: "outfit", name: "Outfit" },
+            images: {
+              smallIcon: "https://media.fortniteapi.io/images/cosmetics/featured/ninja.png",
+              icon: "https://media.fortniteapi.io/images/cosmetics/featured/ninja.png",
+              featured: "https://media.fortniteapi.io/images/cosmetics/featured/ninja.png"
+            }
+          }]
+        },
+        {
+          mainId: "skull-trooper",
+          displayName: "Skull Trooper",
+          displayDescription: "Un soldado del más allá",
+          displayType: "Outfit",
+          mainType: "outfit",
+          offerId: "skull-offer",
+          price: { finalPrice: 1200, regularPrice: 1500, floorPrice: 1200 },
+          banner: "Halloween",
+          granted: [{
+            id: "skull-trooper",
+            name: "Skull Trooper",
+            description: "Outfit épico",
+            rarity: { id: "epic", name: "epic" },
+            type: { id: "outfit", name: "Outfit" },
+            images: {
+              smallIcon: "https://media.fortniteapi.io/images/cosmetics/featured/skull.png",
+              icon: "https://media.fortniteapi.io/images/cosmetics/featured/skull.png",
+              featured: "https://media.fortniteapi.io/images/cosmetics/featured/skull.png"
+            }
+          }]
+        },
+        {
+          mainId: "raven",
+          displayName: "Raven",
+          displayDescription: "Emerge de las sombras",
+          displayType: "Outfit",
+          mainType: "outfit",
+          offerId: "raven-offer",
+          price: { finalPrice: 1500, regularPrice: 1500, floorPrice: 1500 },
           banner: null,
           granted: [{
             id: "raven",
             name: "Raven",
-            description: "Un outfit legendario",
-            rarity: { id: "legendary", name: "legendary" },
-            type: { id: "outfit", name: "Outfit" },
-            images: {
-              smallIcon: "",
-              icon: "",
-              featured: ""
-            }
-          }]
-        },
-        {
-          mainId: "mock-2",
-          displayName: "Storm Skin",
-          displayDescription: "Skin épico con poderes de tormenta",
-          displayType: "Outfit",
-          mainType: "outfit",
-          offerId: "mock-offer-2",
-          price: { finalPrice: 1500, regularPrice: 1500, floorPrice: 1500 },
-          banner: null,
-          granted: [{
-            id: "storm",
-            name: "Storm",
-            description: "Un outfit épico",
+            description: "Outfit épico",
             rarity: { id: "epic", name: "epic" },
             type: { id: "outfit", name: "Outfit" },
             images: {
-              smallIcon: "",
-              icon: "",
-              featured: ""
+              smallIcon: "https://media.fortniteapi.io/images/cosmetics/featured/raven.png",
+              icon: "https://media.fortniteapi.io/images/cosmetics/featured/raven.png",
+              featured: "https://media.fortniteapi.io/images/cosmetics/featured/raven.png"
             }
           }]
         },
+        
+        // PICOS LEGENDARIOS Y ÉPICOS
         {
-          mainId: "mock-3",
-          displayName: "Crystal Pickaxe",
-          displayDescription: "Pico de cristal brillante y poderoso",
+          mainId: "rainbow-smash",
+          displayName: "Rainbow Smash",
+          displayDescription: "Pico que brilla con todos los colores del arcoíris",
           displayType: "Pickaxe",
           mainType: "pickaxe",
-          offerId: "mock-offer-3",
-          price: { finalPrice: 800, regularPrice: 800, floorPrice: 800 },
-          banner: null,
+          offerId: "rainbow-offer",
+          price: { finalPrice: 1500, regularPrice: 1500, floorPrice: 1500 },
+          banner: "Reactivo",
           granted: [{
-            id: "crystal-pickaxe",
-            name: "Crystal Pickaxe",
-            description: "Un pico raro",
-            rarity: { id: "rare", name: "rare" },
+            id: "rainbow-smash",
+            name: "Rainbow Smash",
+            description: "Pico épico",
+            rarity: { id: "epic", name: "epic" },
             type: { id: "pickaxe", name: "Pickaxe" },
             images: {
-              smallIcon: "",
-              icon: "",
-              featured: ""
+              smallIcon: "https://media.fortniteapi.io/images/cosmetics/featured/rainbowpickaxe.png",
+              icon: "https://media.fortniteapi.io/images/cosmetics/featured/rainbowpickaxe.png",
+              featured: "https://media.fortniteapi.io/images/cosmetics/featured/rainbowpickaxe.png"
             }
           }]
         },
         {
-          mainId: "mock-4",
-          displayName: "Victory Emote",
-          displayDescription: "Celebra tus victorias con estilo",
-          displayType: "Emote",
-          mainType: "emote",
-          offerId: "mock-offer-4",
-          price: { finalPrice: 500, regularPrice: 500, floorPrice: 500 },
-          banner: "¡Popular!",
-          granted: [{
-            id: "victory-emote",
-            name: "Victory Emote",
-            description: "Un baile poco común",
-            rarity: { id: "uncommon", name: "uncommon" },
-            type: { id: "emote", name: "Emote" },
-            images: {
-              smallIcon: "",
-              icon: "",
-              featured: ""
-            }
-          }]
-        },
-        {
-          mainId: "mock-5",
-          displayName: "Lightning Glider",
-          displayDescription: "Planea con la velocidad del rayo",
-          displayType: "Glider",
-          mainType: "glider",
-          offerId: "mock-offer-5",
+          mainId: "psi-blade",
+          displayName: "Psi-Blade",
+          displayDescription: "Energía pura concentrada en una hoja",
+          displayType: "Pickaxe",
+          mainType: "pickaxe",
+          offerId: "psi-offer",
           price: { finalPrice: 1200, regularPrice: 1200, floorPrice: 1200 },
           banner: null,
           granted: [{
-            id: "lightning-glider",
-            name: "Lightning Glider",
-            description: "Un planeador épico",
+            id: "psi-blade",
+            name: "Psi-Blade",
+            description: "Pico épico",
             rarity: { id: "epic", name: "epic" },
-            type: { id: "glider", name: "Glider" },
+            type: { id: "pickaxe", name: "Pickaxe" },
             images: {
-              smallIcon: "",
-              icon: "",
-              featured: ""
+              smallIcon: "https://media.fortniteapi.io/images/cosmetics/featured/psiblade.png",
+              icon: "https://media.fortniteapi.io/images/cosmetics/featured/psiblade.png",
+              featured: "https://media.fortniteapi.io/images/cosmetics/featured/psiblade.png"
+            }
+          }]
+        },
+        
+        // EMOTES POPULARES
+        {
+          mainId: "floss",
+          displayName: "Floss",
+          displayDescription: "El baile más viral de Fortnite",
+          displayType: "Emote",
+          mainType: "emote",
+          offerId: "floss-offer",
+          price: { finalPrice: 500, regularPrice: 500, floorPrice: 500 },
+          banner: "Clásico",
+          granted: [{
+            id: "floss",
+            name: "Floss",
+            description: "Emote raro",
+            rarity: { id: "rare", name: "rare" },
+            type: { id: "emote", name: "Emote" },
+            images: {
+              smallIcon: "https://media.fortniteapi.io/images/cosmetics/featured/floss.png",
+              icon: "https://media.fortniteapi.io/images/cosmetics/featured/floss.png",
+              featured: "https://media.fortniteapi.io/images/cosmetics/featured/floss.png"
             }
           }]
         },
         {
-          mainId: "mock-6",
-          displayName: "Shadow Wrap",
-          displayDescription: "Envuelve tus armas en las sombras",
+          mainId: "take-the-l",
+          displayName: "Take the L",
+          displayDescription: "Para cuando quieres provocar a tus oponentes",
+          displayType: "Emote",
+          mainType: "emote",
+          offerId: "take-l-offer",
+          price: { finalPrice: 500, regularPrice: 500, floorPrice: 500 },
+          banner: "Provocativo",
+          granted: [{
+            id: "take-the-l",
+            name: "Take the L",
+            description: "Emote raro",
+            rarity: { id: "rare", name: "rare" },
+            type: { id: "emote", name: "Emote" },
+            images: {
+              smallIcon: "https://media.fortniteapi.io/images/cosmetics/featured/takel.png",
+              icon: "https://media.fortniteapi.io/images/cosmetics/featured/takel.png",
+              featured: "https://media.fortniteapi.io/images/cosmetics/featured/takel.png"
+            }
+          }]
+        },
+        {
+          mainId: "orange-justice",
+          displayName: "Orange Justice",
+          displayDescription: "Justicia para todos los naranjas",
+          displayType: "Emote",
+          mainType: "emote",
+          offerId: "orange-offer",
+          price: { finalPrice: 800, regularPrice: 800, floorPrice: 800 },
+          banner: "Viral",
+          granted: [{
+            id: "orange-justice",
+            name: "Orange Justice",
+            description: "Emote épico",
+            rarity: { id: "epic", name: "epic" },
+            type: { id: "emote", name: "Emote" },
+            images: {
+              smallIcon: "https://media.fortniteapi.io/images/cosmetics/featured/orange.png",
+              icon: "https://media.fortniteapi.io/images/cosmetics/featured/orange.png",
+              featured: "https://media.fortniteapi.io/images/cosmetics/featured/orange.png"
+            }
+          }]
+        },
+        
+        // PLANEADORES
+        {
+          mainId: "mako",
+          displayName: "Mako",
+          displayDescription: "Surca los cielos como un tiburón",
+          displayType: "Glider",
+          mainType: "glider",
+          offerId: "mako-offer",
+          price: { finalPrice: 500, regularPrice: 500, floorPrice: 500 },
+          banner: "Temporada 1",
+          granted: [{
+            id: "mako",
+            name: "Mako",
+            description: "Planeador poco común",
+            rarity: { id: "uncommon", name: "uncommon" },
+            type: { id: "glider", name: "Glider" },
+            images: {
+              smallIcon: "https://media.fortniteapi.io/images/cosmetics/featured/mako.png",
+              icon: "https://media.fortniteapi.io/images/cosmetics/featured/mako.png",
+              featured: "https://media.fortniteapi.io/images/cosmetics/featured/mako.png"
+            }
+          }]
+        },
+        {
+          mainId: "victory-royale",
+          displayName: "Victory Royale",
+          displayDescription: "El planeador de los campeones",
+          displayType: "Glider",
+          mainType: "glider",
+          offerId: "victory-offer",
+          price: { finalPrice: 1200, regularPrice: 1200, floorPrice: 1200 },
+          banner: "Exclusivo",
+          granted: [{
+            id: "victory-royale",
+            name: "Victory Royale",
+            description: "Planeador épico",
+            rarity: { id: "epic", name: "epic" },
+            type: { id: "glider", name: "Glider" },
+            images: {
+              smallIcon: "https://media.fortniteapi.io/images/cosmetics/featured/victory.png",
+              icon: "https://media.fortniteapi.io/images/cosmetics/featured/victory.png",
+              featured: "https://media.fortniteapi.io/images/cosmetics/featured/victory.png"
+            }
+          }]
+        },
+        
+        // ENVOLTURAS
+        {
+          mainId: "carbon-gold",
+          displayName: "Carbon & Gold",
+          displayDescription: "Elegancia y potencia combinadas",
           displayType: "Wrap",
           mainType: "wrap",
-          offerId: "mock-offer-6",
-          price: { finalPrice: 300, regularPrice: 300, floorPrice: 300 },
-          banner: "¡Nuevo!",
+          offerId: "carbon-offer",
+          price: { finalPrice: 600, regularPrice: 600, floorPrice: 600 },
+          banner: null,
           granted: [{
-            id: "shadow-wrap",
-            name: "Shadow Wrap",
-            description: "Un envoltorio común",
-            rarity: { id: "common", name: "common" },
+            id: "carbon-gold",
+            name: "Carbon & Gold",
+            description: "Envoltura rara",
+            rarity: { id: "rare", name: "rare" },
             type: { id: "wrap", name: "Wrap" },
             images: {
-              smallIcon: "",
-              icon: "",
-              featured: ""
+              smallIcon: "https://media.fortniteapi.io/images/cosmetics/featured/carbon.png",
+              icon: "https://media.fortniteapi.io/images/cosmetics/featured/carbon.png",
+              featured: "https://media.fortniteapi.io/images/cosmetics/featured/carbon.png"
+            }
+          }]
+        },
+        
+        // MOCHILAS
+        {
+          mainId: "black-shield",
+          displayName: "Black Shield",
+          displayDescription: "Protección oscura para tu espalda",
+          displayType: "Back Bling",
+          mainType: "backpack",
+          offerId: "shield-offer",
+          price: { finalPrice: 1200, regularPrice: 1200, floorPrice: 1200 },
+          banner: null,
+          granted: [{
+            id: "black-shield",
+            name: "Black Shield",
+            description: "Mochila épica",
+            rarity: { id: "epic", name: "epic" },
+            type: { id: "backpack", name: "Back Bling" },
+            images: {
+              smallIcon: "https://media.fortniteapi.io/images/cosmetics/featured/blackshield.png",
+              icon: "https://media.fortniteapi.io/images/cosmetics/featured/blackshield.png",
+              featured: "https://media.fortniteapi.io/images/cosmetics/featured/blackshield.png"
+            }
+          }]
+        },
+        
+        // ITEMS DEL PASE DE BATALLA
+        {
+          mainId: "tier-100-skin",
+          displayName: "The Foundation",
+          displayDescription: "El líder de los Seven",
+          displayType: "Outfit",
+          mainType: "outfit",
+          offerId: "foundation-offer",
+          price: { finalPrice: 2000, regularPrice: 2000, floorPrice: 2000 },
+          banner: "Pase de Batalla",
+          granted: [{
+            id: "foundation",
+            name: "The Foundation",
+            description: "Outfit legendario",
+            rarity: { id: "legendary", name: "legendary" },
+            type: { id: "outfit", name: "Outfit" },
+            images: {
+              smallIcon: "https://media.fortniteapi.io/images/cosmetics/featured/foundation.png",
+              icon: "https://media.fortniteapi.io/images/cosmetics/featured/foundation.png",
+              featured: "https://media.fortniteapi.io/images/cosmetics/featured/foundation.png"
+            }
+          }]
+        },
+        
+        // COLABORACIONES ESPECIALES
+        {
+          mainId: "ariana-grande",
+          displayName: "Ariana Grande",
+          displayDescription: "La superestrella del pop llega a Fortnite",
+          displayType: "Outfit",
+          mainType: "outfit",
+          offerId: "ariana-offer",
+          price: { finalPrice: 1800, regularPrice: 1800, floorPrice: 1800 },
+          banner: "Concierto",
+          granted: [{
+            id: "ariana-grande",
+            name: "Ariana Grande",
+            description: "Outfit legendario",
+            rarity: { id: "legendary", name: "legendary" },
+            type: { id: "outfit", name: "Outfit" },
+            images: {
+              smallIcon: "https://media.fortniteapi.io/images/cosmetics/featured/ariana.png",
+              icon: "https://media.fortniteapi.io/images/cosmetics/featured/ariana.png",
+              featured: "https://media.fortniteapi.io/images/cosmetics/featured/ariana.png"
+            }
+          }]
+        },
+        
+        // ITEMS POCO COMUNES ECONÓMICOS
+        {
+          mainId: "default-dance",
+          displayName: "Default Dance",
+          displayDescription: "El baile que inició todo",
+          displayType: "Emote",
+          mainType: "emote",
+          offerId: "default-offer",
+          price: { finalPrice: 200, regularPrice: 200, floorPrice: 200 },
+          banner: "Gratis Originalmente",
+          granted: [{
+            id: "default-dance",
+            name: "Default Dance",
+            description: "Emote común",
+            rarity: { id: "common", name: "common" },
+            type: { id: "emote", name: "Emote" },
+            images: {
+              smallIcon: "https://media.fortniteapi.io/images/cosmetics/featured/default.png",
+              icon: "https://media.fortniteapi.io/images/cosmetics/featured/default.png",
+              featured: "https://media.fortniteapi.io/images/cosmetics/featured/default.png"
             }
           }]
         }
@@ -313,6 +640,11 @@ export const FortniteShop = () => {
             const rarity = mainItem?.rarity?.name || 'common';
             const finalPrice = item.price?.finalPrice ?? 0;
             const regularPrice = item.price?.regularPrice ?? finalPrice;
+            
+            // Get the best available image
+            const itemImage = mainItem?.images?.featured || 
+                            mainItem?.images?.icon || 
+                            mainItem?.images?.smallIcon;
 
             return (
               <Card 
@@ -321,14 +653,32 @@ export const FortniteShop = () => {
               >
                 <div className="absolute inset-0 bg-card/90 backdrop-blur-sm"></div>
                 <CardContent className="relative p-4">
-                  <div className="aspect-square mb-4 overflow-hidden rounded-lg bg-muted flex items-center justify-center">
-                    <div className="text-6xl opacity-50">
-                      {item.mainType === 'outfit' ? '👤' : 
-                       item.mainType === 'pickaxe' ? '⛏️' : 
-                       item.mainType === 'emote' ? '💃' :
-                       item.mainType === 'glider' ? '🪂' :
-                       item.mainType === 'wrap' ? '🎨' : '🎮'}
-                    </div>
+                  <div className="aspect-square mb-4 overflow-hidden rounded-lg bg-muted">
+                    {itemImage ? (
+                      <img 
+                        src={itemImage} 
+                        alt={item.displayName}
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                        onError={(e) => {
+                          // Fallback to placeholder image if real image fails
+                          e.currentTarget.src = `https://via.placeholder.com/400x400/1f2937/ffffff?text=${encodeURIComponent(item.displayName)}`;
+                        }}
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-700 to-gray-900 text-white">
+                        <div className="text-center">
+                          <div className="text-4xl mb-2">
+                            {item.mainType === 'outfit' ? '👤' : 
+                             item.mainType === 'pickaxe' ? '⛏️' : 
+                             item.mainType === 'emote' ? '💃' :
+                             item.mainType === 'glider' ? '🪂' :
+                             item.mainType === 'wrap' ? '🎨' : 
+                             item.mainType === 'backpack' ? '🎒' : '🎮'}
+                          </div>
+                          <div className="text-xs font-medium">{item.displayType}</div>
+                        </div>
+                      </div>
+                    )}
                   </div>
                   
                   <div className="space-y-2">
