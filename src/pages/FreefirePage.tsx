@@ -76,7 +76,7 @@ const FreefirePage = () => {
           </div>
           
           <div className="text-center mb-16">
-            <img src={freefireImage} alt="Free Fire" className="w-32 h-32 mx-auto mb-8 rounded-lg" />
+            <img src="/lovable-uploads/128204bb-4567-48ca-9648-827aae5b7f9a.png" alt="Free Fire" className="w-32 h-32 mx-auto mb-8 rounded-lg" />
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4">
               FREE FIRE
             </h1>
