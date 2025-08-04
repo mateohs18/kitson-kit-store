@@ -1,11 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { MessageCircle, Instagram, Facebook, Shield, Clock, Award } from "lucide-react";
-
 export const ContactSection = () => {
   const handleContact = (platform: string) => {
     const message = "Hola! Me gustaría conocer más sobre sus productos digitales para gaming.";
-    
     switch (platform) {
       case 'whatsapp':
         window.open(`https://wa.me/1234567890?text=${encodeURIComponent(message)}`, '_blank');
@@ -18,9 +16,7 @@ export const ContactSection = () => {
         break;
     }
   };
-
-  return (
-    <section className="py-20 bg-gradient-to-b from-background to-muted">
+  return <section className="py-20 bg-gradient-to-b from-background to-muted">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4">
@@ -59,7 +55,7 @@ export const ContactSection = () => {
                   <Award className="w-6 h-6 text-secondary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground">+2 Años de Experiencia</h3>
+                  <h3 className="font-semibold text-foreground">+3 Años de Experiencia</h3>
                   <p className="text-muted-foreground text-sm">Miles de clientes satisfechos</p>
                 </div>
               </div>
@@ -73,30 +69,17 @@ export const ContactSection = () => {
               </h3>
               
               <div className="space-y-4 mb-8">
-                <Button 
-                  variant="gaming" 
-                  size="xl" 
-                  className="w-full"
-                  onClick={() => handleContact('whatsapp')}
-                >
+                <Button variant="gaming" size="xl" className="w-full" onClick={() => handleContact('whatsapp')}>
                   <MessageCircle className="w-5 h-5" />
                   WhatsApp
                 </Button>
                 
                 <div className="grid grid-cols-2 gap-4">
-                  <Button 
-                    variant="social" 
-                    className="flex-1"
-                    onClick={() => handleContact('facebook')}
-                  >
+                  <Button variant="social" className="flex-1" onClick={() => handleContact('facebook')}>
                     <Facebook className="w-5 h-5" />
                     Facebook
                   </Button>
-                  <Button 
-                    variant="social" 
-                    className="flex-1"
-                    onClick={() => handleContact('instagram')}
-                  >
+                  <Button variant="social" className="flex-1" onClick={() => handleContact('instagram')}>
                     <Instagram className="w-5 h-5" />
                     Instagram
                   </Button>
@@ -110,6 +93,5 @@ export const ContactSection = () => {
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
