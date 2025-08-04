@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { MessageCircle, Instagram, Facebook, Shield, Clock, Award, Bot } from "lucide-react";
+import { MessageCircle, Instagram, Facebook, Shield, Clock, Award, MessageSquare } from "lucide-react";
 export const ContactSection = () => {
   const handleContact = (platform: string) => {
     const message = "Hola! Me gustaría conocer más sobre sus productos digitales para gaming.";
@@ -72,14 +72,14 @@ export const ContactSection = () => {
               </h3>
               
               <div className="space-y-4 mb-8">
-                <Button variant="gaming" size="xl" className="w-full" onClick={() => handleContact('discord')}>
-                  <Bot className="w-5 h-5" />
-                  Discord
+                <Button variant="gaming" size="xl" className="w-full" onClick={() => handleContact('facebook')}>
+                  <Facebook className="w-5 h-5" />
+                  Facebook
                 </Button>
                 
                 <div className="grid grid-cols-3 gap-2">
-                  <Button variant="social" className="flex-1" onClick={() => handleContact('facebook')}>
-                    <Facebook className="w-4 h-4" />
+                  <Button variant="social" className="flex-1" onClick={() => handleContact('discord')}>
+                    <MessageSquare className="w-4 h-4" />
                   </Button>
                   <Button variant="social" className="flex-1" onClick={() => handleContact('instagram')}>
                     <Instagram className="w-4 h-4" />
