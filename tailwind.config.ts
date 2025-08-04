@@ -155,15 +155,15 @@ export default {
 				}
 			},
 			animation: {
-				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.6s ease-out',
-				'float': 'float 3s ease-in-out infinite',
-				'glow': 'glow 2s ease-in-out infinite',
-				'pulse-glow': 'pulse-glow 3s ease-in-out infinite',
-				'bounce-subtle': 'bounce-subtle 2s ease-in-out infinite',
-				'slide-in-bottom': 'slide-in-bottom 0.5s ease-out',
-				'stagger-fade': 'stagger-fade 0.8s ease-out forwards'
+				'accordion-down': 'accordion-down 0.4s ease-out',
+				'accordion-up': 'accordion-up 0.4s ease-out',
+				'fade-in': 'fade-in 1.2s ease-out',
+				'float': 'float 4s ease-in-out infinite',
+				'glow': 'glow 3s ease-in-out infinite',
+				'pulse-glow': 'pulse-glow 4s ease-in-out infinite',
+				'bounce-subtle': 'bounce-subtle 3s ease-in-out infinite',
+				'slide-in-bottom': 'slide-in-bottom 0.8s ease-out',
+				'stagger-fade': 'stagger-fade 1.2s ease-out forwards'
 			}
 		}
 	},

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { ProductCard } from "@/components/ProductCard";
@@ -9,47 +10,57 @@ import { TrustBadges } from "@/components/TrustBadges";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { StatsCounter } from "@/components/StatsCounter";
 import { FAQSection } from "@/components/FAQSection";
+import { ProductFilters, FilterState } from "@/components/ProductFilters";
+import { ChatWidget } from "@/components/ChatWidget";
+import { CountdownTimer, SocialProof } from "@/components/UrgencyElements";
 import { Shield, Zap, Users, Star } from "lucide-react";
 import heroImage from "@/assets/hero-gaming.jpg";
 import fortniteImage from "@/assets/fortnite-product.jpg";
 import freefireImage from "@/assets/freefire-product.jpg";
 import minecraftImage from "@/assets/minecraft-product.jpg";
 const Index = () => {
+  const [filteredProducts, setFilteredProducts] = useState(() => products);
+  
   const products = [{
     title: "CLUB DE FORTNITE",
     subtitle: "Cuenta con Error",
     description: "Acceso completo al pase de batalla y contenido exclusivo. Método seguro sin riesgo para tu cuenta principal.",
     price: "Desde $15",
     image: fortniteImage,
-    category: "Fortnite"
+    category: "fortnite",
+    priceValue: 15
   }, {
     title: "CLUB DE FORTNITE",
     subtitle: "Cuenta sin Error",
     description: "Cuenta premium sin errores, acceso completo a todos los beneficios del club. La opción más segura.",
     price: "Desde $25",
     image: fortniteImage,
-    category: "Fortnite"
+    category: "fortnite",
+    priceValue: 25
   }, {
     title: "OBJETOS VIA REGALO",
     subtitle: "Cualquier skin disponible",
     description: "Recibe cualquier skin o item del juego directamente como regalo. 100% seguro y legal.",
     price: "Varía",
     image: fortniteImage,
-    category: "Fortnite"
+    category: "fortnite",
+    priceValue: 20
   }, {
     title: "DIAMANTES FREE FIRE",
     subtitle: "Recarga inmediata",
     description: "Diamantes oficiales para Free Fire con entrega inmediata. Sin baneos ni problemas.",
     price: "Desde $5",
     image: freefireImage,
-    category: "Free Fire"
+    category: "freefire",
+    priceValue: 5
   }, {
     title: "MINECOINS",
     subtitle: "Moneda oficial de Minecraft",
     description: "Minecoins oficiales para comprar contenido en Minecraft Marketplace. Entrega rápida.",
     price: "Desde $10",
     image: minecraftImage,
-    category: "Minecraft"
+    category: "minecraft",
+    priceValue: 10
   }];
   const reviews = [{
     name: "Carlos M.",
@@ -67,6 +78,48 @@ const Index = () => {
     comment: "Llevo más de 6 meses comprando aquí. Siempre cumplen y con los mejores precios del mercado.",
     date: "Hace 2 semanas"
   }];
+  const handleFilterChange = (filters: FilterState) => {
+    let filtered = [...products];
+
+    // Filter by category
+    if (filters.category !== "all") {
+      filtered = filtered.filter(product => product.category === filters.category);
+    }
+
+    // Filter by price range
+    if (filters.priceRange !== "all") {
+      const [min, max] = filters.priceRange.split("-").map(Number);
+      if (max) {
+        filtered = filtered.filter(product => product.priceValue >= min && product.priceValue <= max);
+      } else {
+        // Handle "50+" case
+        filtered = filtered.filter(product => product.priceValue >= 50);
+      }
+    }
+
+    // Sort products
+    switch (filters.sortBy) {
+      case "price-low":
+        filtered.sort((a, b) => a.priceValue - b.priceValue);
+        break;
+      case "price-high":
+        filtered.sort((a, b) => b.priceValue - a.priceValue);
+        break;
+      case "newest":
+        // For demo purposes, reverse order
+        filtered.reverse();
+        break;
+      case "popular":
+        filtered.sort((a, b) => (b.priceValue - a.priceValue)); // Simulate popularity
+        break;
+      default:
+        // Keep original order for "featured"
+        break;
+    }
+
+    setFilteredProducts(filtered);
+  };
+
   const scrollToProducts = () => {
     document.getElementById('productos')?.scrollIntoView({
       behavior: 'smooth'
@@ -75,6 +128,7 @@ const Index = () => {
   return <div className="min-h-screen bg-background">
       <ScrollProgress />
       <Header />
+      <ChatWidget />
       
       {/* Hero Section */}
       <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -103,7 +157,7 @@ const Index = () => {
               <span className="text-secondary font-semibold"> entrega rápida</span>.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Button 
                 variant="gaming" 
                 size="xl" 
@@ -121,6 +175,11 @@ const Index = () => {
                 <Shield className="w-5 h-5" />
                 ¿Por qué elegirnos?
               </Button>
+            </div>
+
+            {/* Countdown Timer for special offers */}
+            <div className="mb-12 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+              <CountdownTimer minutes={30} />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
@@ -171,12 +230,33 @@ const Index = () => {
             </p>
           </div>
 
+          {/* Social Proof */}
+          <div className="mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <SocialProof />
+          </div>
+          
+          {/* Product Filters */}
+          <ProductFilters onFilterChange={handleFilterChange} />
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {products.map((product, index) => (
-              <div key={index} className="animate-stagger-fade" style={{animationDelay: `${index * 0.15}s`}}>
-                <ProductCard {...product} />
+            {filteredProducts.length > 0 ? (
+              filteredProducts.map((product, index) => (
+                <div key={index} className="animate-stagger-fade" style={{animationDelay: `${index * 0.15}s`}}>
+                  <ProductCard {...product} />
+                </div>
+              ))
+            ) : (
+              <div className="col-span-full text-center py-12">
+                <p className="text-muted-foreground text-lg">No se encontraron productos con estos filtros.</p>
+                <Button 
+                  variant="outline" 
+                  onClick={() => handleFilterChange({ category: "all", priceRange: "all", sortBy: "featured" })}
+                  className="mt-4"
+                >
+                  Limpiar filtros
+                </Button>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
