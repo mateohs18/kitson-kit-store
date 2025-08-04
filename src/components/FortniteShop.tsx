@@ -43,7 +43,7 @@ interface FortniteItem {
     name: string;
     category: string;
   };
-  newDisplayAsset: {
+  newDisplayAsset?: {
     id: string;
     cosmeticId: string;
     materialInstances: Array<{
@@ -54,7 +54,7 @@ interface FortniteItem {
       };
     }>;
   };
-  displayAssets: Array<{
+  displayAssets?: Array<{
     displayAsset: string;
     materialInstance: string;
     url: string;
@@ -98,6 +98,8 @@ export const FortniteShop = () => {
       }
       
       const data: FortniteShopData = await response.json();
+      console.log('Fortnite API Response:', data);
+      console.log('Shop items count:', data.shop?.length);
       setShopData(data);
     } catch (err) {
       console.error('Error fetching Fortnite shop:', err);
@@ -155,8 +157,14 @@ export const FortniteShop = () => {
   const featuredItems = shopData.shop.filter(item => 
     (item.layout && item.layout.category === 'Featured') || 
     (item.tile && item.tile.category === 'Featured') ||
-    item.finalPrice >= 1500
-  ).slice(0, 8);
+    item.finalPrice >= 800 // Lowered threshold to show more items
+  ).slice(0, 12); // Show more items
+  
+  // If no featured items, show first 12 items from shop
+  const itemsToShow = featuredItems.length > 0 ? featuredItems : shopData.shop.slice(0, 12);
+  
+  console.log('Featured items found:', featuredItems.length);
+  console.log('Items to show:', itemsToShow.length);
 
   return (
     <section className="py-20 bg-gradient-to-b from-background to-muted">
@@ -176,11 +184,11 @@ export const FortniteShop = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {featuredItems.map((item) => {
+          {itemsToShow.map((item) => {
             const mainItem = item.granted[0];
             const rarity = mainItem?.rarity?.name || 'common';
-            const itemImage = item.displayAssets[0]?.url || 
-                            item.newDisplayAsset?.materialInstances[0]?.images?.OfferImage ||
+            const itemImage = item.displayAssets?.[0]?.url || 
+                            item.newDisplayAsset?.materialInstances?.[0]?.images?.OfferImage ||
                             mainItem?.images?.featured || 
                             mainItem?.images?.icon;
 
