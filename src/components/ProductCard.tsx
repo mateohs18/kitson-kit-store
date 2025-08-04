@@ -44,7 +44,7 @@ export const ProductCard = ({ title, subtitle, description, price, image, catego
           <div className="absolute top-3 left-3 bg-primary text-primary-foreground px-2 py-1 rounded-md text-xs font-semibold">
             {category}
           </div>
-          <div className="absolute top-3 right-3 bg-accent text-accent-foreground px-2 py-1 rounded-md text-sm font-bold">
+          <div className="absolute bottom-3 right-3 bg-accent text-accent-foreground px-2 py-1 rounded-md text-sm font-bold">
             {price}
           </div>
         </div>
