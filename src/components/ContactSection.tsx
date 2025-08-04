@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Instagram, Facebook, Shield, Clock, Award } from "lucide-react";
-import discordLogo from "@/assets/discord-logo.png";
+import discordIcon from "@/assets/discord-icon.png";
 import whatsappIcon from "@/assets/whatsapp-icon.png";
 export const ContactSection = () => {
   const handleContact = (platform: string) => {
@@ -81,7 +81,7 @@ export const ContactSection = () => {
                 
                 <div className="grid grid-cols-3 gap-2">
                   <Button variant="social" className="flex-1" onClick={() => handleContact('discord')}>
-                    <img src={discordLogo} alt="Discord" className="w-4 h-4 filter brightness-0 invert" />
+                    <img src={discordIcon} alt="Discord" className="w-4 h-4 filter brightness-0 invert" />
                   </Button>
                   <Button variant="social" className="flex-1" onClick={() => handleContact('instagram')}>
                     <Instagram className="w-4 h-4" />

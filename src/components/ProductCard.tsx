@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Instagram, Facebook } from "lucide-react";
-import discordLogo from "@/assets/discord-logo.png";
+import discordIcon from "@/assets/discord-icon.png";
 import whatsappIcon from "@/assets/whatsapp-icon.png";
 
 interface ProductCardProps {
@@ -79,7 +79,7 @@ export const ProductCard = ({ title, subtitle, description, price, image, catego
                 size="sm"
                 onClick={() => handleContact('discord')}
               >
-                <img src={discordLogo} alt="Discord" className="w-4 h-4 filter brightness-0 invert" />
+                <img src={discordIcon} alt="Discord" className="w-4 h-4 filter brightness-0 invert" />
               </Button>
               <Button 
                 variant="social" 
