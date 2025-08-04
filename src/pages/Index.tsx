@@ -161,7 +161,7 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-background/95"></div>
         </div>
         
-        <div className="relative z-10 container mx-auto px-4 text-center">
+        <div className="relative z-10 container mx-auto px-4 text-center" style={{ backgroundColor: '#D2D2D2' }}>
           <div className="max-w-4xl mx-auto animate-fade-in">
             <div className="flex items-center justify-center gap-4 mb-6 mt-16">
               <img src="/lovable-uploads/3869feb0-7ccb-431c-95b7-53b04dbb7fdf.png" alt="Kitson Kit Logo" className="w-16 h-16 md:w-20 md:h-20 rounded-full animate-float" />
