@@ -276,6 +276,20 @@ const Index = () => {
                 </h3>
               </div>
               
+              {selectedCategory === "FORTNITE" && (
+                <div className="bg-card border border-border rounded-lg p-6 mb-8">
+                  <h4 className="text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
+                    <Shield className="w-5 h-5 text-primary" />
+                    ¿Qué es el Error de Región?
+                  </h4>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Es un error que aparece si jugaste en Xbox alguna vez. <strong className="text-foreground">Nosotros hacemos la recarga directa por Xbox</strong>, 
+                    saltando completamente ese error. <span className="text-primary font-medium">Sin riesgo ni métodos raros</span> - 
+                    proceso 100% seguro y confiable.
+                  </p>
+                </div>
+              )}
+              
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredProducts.map((product, index) => (
                   <ProductCard key={index} {...product} />
