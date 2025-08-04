@@ -32,13 +32,13 @@ interface FortniteItem {
       featured: string;
     };
   }>;
-  layout: {
+  layout?: {
     id: string;
     name: string;
     category: string;
     index: number;
   };
-  tile: {
+  tile?: {
     id: string;
     name: string;
     category: string;
@@ -153,8 +153,8 @@ export const FortniteShop = () => {
   }
 
   const featuredItems = shopData.shop.filter(item => 
-    item.layout.category === 'Featured' || 
-    item.tile.category === 'Featured' ||
+    (item.layout && item.layout.category === 'Featured') || 
+    (item.tile && item.tile.category === 'Featured') ||
     item.finalPrice >= 1500
   ).slice(0, 8);
 
