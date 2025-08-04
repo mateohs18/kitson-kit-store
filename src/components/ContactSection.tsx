@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Instagram, Facebook, Shield, Clock, Award } from "lucide-react";
+import { Shield, Clock, Award } from "lucide-react";
 import discordIcon from "@/assets/discord-icon.png";
 import whatsappIcon from "@/assets/whatsapp-icon.png";
+import facebookIcon from "@/assets/facebook-icon.png";
+import instagramIcon from "@/assets/instagram-icon.png";
 export const ContactSection = () => {
   const handleContact = (platform: string) => {
     const message = "Hola! Me gustaría conocer más sobre sus productos digitales para gaming.";
@@ -75,7 +77,7 @@ export const ContactSection = () => {
               
               <div className="space-y-4 mb-8">
                 <Button variant="gaming" size="xl" className="w-full" onClick={() => handleContact('facebook')}>
-                  <Facebook className="w-5 h-5" />
+                  <img src={facebookIcon} alt="Facebook" className="w-5 h-5 filter brightness-0 invert" />
                   Facebook
                 </Button>
                 
@@ -84,7 +86,7 @@ export const ContactSection = () => {
                     <img src={discordIcon} alt="Discord" className="w-4 h-4 filter brightness-0 invert" />
                   </Button>
                   <Button variant="social" className="flex-1" onClick={() => handleContact('instagram')}>
-                    <Instagram className="w-4 h-4" />
+                    <img src={instagramIcon} alt="Instagram" className="w-4 h-4 filter brightness-0 invert" />
                   </Button>
                   <Button variant="social" className="flex-1" onClick={() => handleContact('whatsapp')}>
                     <img src={whatsappIcon} alt="WhatsApp" className="w-4 h-4 filter brightness-0 invert" />
