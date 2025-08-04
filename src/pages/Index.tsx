@@ -4,6 +4,7 @@ import { ProductCard } from "@/components/ProductCard";
 import { ContactSection } from "@/components/ContactSection";
 import { Shield, Zap, Users, ArrowLeft, CheckCircle } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-professional.jpg";
 const fortniteImage = "/lovable-uploads/deaf7a90-011e-4ebf-8f94-15b2606530db.png";
 const freefireImage = "/lovable-uploads/2e7f57ec-2038-4990-b90a-f42ff5d2fe88.png";
@@ -200,54 +201,34 @@ const Index = () => {
             </p>
           </div>
 
-          {!selectedCategory ?
-        // Show Categories
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {categories.map((category, index) => <div key={category.name} onClick={() => setSelectedCategory(category.name)} className="group cursor-pointer bg-card border-border hover:border-primary/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl animate-fade-in rounded-lg overflow-hidden" style={{
-            animationDelay: `${index * 0.1}s`
-          }}>
-                  <div className="relative overflow-hidden">
-                    <img src={category.image} alt={category.name} className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                      <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">
-                        {category.name}
-                      </h3>
-                      <p className="text-gray-200 text-sm">
-                        {category.description}
-                      </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {categories.map((category, index) => {
+              const categoryRoute = category.name === "FORTNITE" ? "/fortnite" : 
+                                   category.name === "FREE FIRE" ? "/freefire" : 
+                                   "/minecraft";
+              
+              return (
+                <Link key={category.name} to={categoryRoute}>
+                  <div className="group cursor-pointer bg-card border-border hover:border-primary/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl animate-fade-in rounded-lg overflow-hidden" style={{
+                    animationDelay: `${index * 0.1}s`
+                  }}>
+                    <div className="relative overflow-hidden">
+                      <img src={category.image} alt={category.name} className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                      <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">
+                          {category.name}
+                        </h3>
+                        <p className="text-gray-200 text-sm">
+                          {category.description}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>)}
-            </div> :
-        // Show Products for selected category
-        <div className="space-y-8">
-              <div className="flex items-center gap-4 mb-8">
-                <Button variant="outline" onClick={() => setSelectedCategory(null)} className="flex items-center gap-2">
-                  <ArrowLeft className="w-4 h-4" />
-                  Volver a categorías
-                </Button>
-                <h3 className="text-2xl font-bold text-foreground">
-                  {selectedCategory}
-                </h3>
-              </div>
-              
-              {selectedCategory === "FORTNITE" && <div className="bg-card border border-border rounded-lg p-6 mb-8">
-                  <h4 className="text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
-                    <Shield className="w-5 h-5 text-primary" />
-                    ¿Qué es el Error de Región?
-                  </h4>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Es un error que aparece si jugaste en Xbox alguna vez. <strong className="text-foreground">Nosotros hacemos la recarga directa por Xbox</strong>, 
-                    saltando completamente ese error. <span className="text-primary font-medium">Sin riesgo ni métodos raros</span> - 
-                    proceso 100% seguro y confiable.
-                  </p>
-                </div>}
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredProducts.map((product, index) => <ProductCard key={index} {...product} />)}
-              </div>
-            </div>}
+                </Link>
+              );
+            })}
+          </div>
         </div>
       </section>
 
