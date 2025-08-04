@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Instagram, Facebook } from "lucide-react";
 import discordLogo from "@/assets/discord-logo.png";
-import whatsappLogo from "@/assets/whatsapp-logo.png";
+import whatsappIcon from "@/assets/whatsapp-icon.png";
 
 interface ProductCardProps {
   title: string;
@@ -93,7 +93,7 @@ export const ProductCard = ({ title, subtitle, description, price, image, catego
                 size="sm"
                 onClick={() => handleContact('whatsapp')}
               >
-                <img src={whatsappLogo} alt="WhatsApp" className="w-4 h-4 filter brightness-0 invert" />
+                <img src={whatsappIcon} alt="WhatsApp" className="w-4 h-4 filter brightness-0 invert" />
               </Button>
             </div>
           </div>

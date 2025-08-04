@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Instagram, Facebook, Shield, Clock, Award } from "lucide-react";
 import discordLogo from "@/assets/discord-logo.png";
-import whatsappLogo from "@/assets/whatsapp-logo.png";
+import whatsappIcon from "@/assets/whatsapp-icon.png";
 export const ContactSection = () => {
   const handleContact = (platform: string) => {
     const message = "Hola! Me gustaría conocer más sobre sus productos digitales para gaming.";
@@ -87,7 +87,7 @@ export const ContactSection = () => {
                     <Instagram className="w-4 h-4" />
                   </Button>
                   <Button variant="social" className="flex-1" onClick={() => handleContact('whatsapp')}>
-                    <img src={whatsappLogo} alt="WhatsApp" className="w-4 h-4 filter brightness-0 invert" />
+                    <img src={whatsappIcon} alt="WhatsApp" className="w-4 h-4 filter brightness-0 invert" />
                   </Button>
                 </div>
               </div>
