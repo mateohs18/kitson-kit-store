@@ -6,8 +6,8 @@ import { Loader2, ShoppingCart } from "lucide-react";
 
 interface FortniteItem {
   mainId: string;
-  displayName: string;
-  displayDescription: string;
+  displayName: string | any;
+  displayDescription: string | any;
   displayType: string;
   mainType: string;
   offerId: string;
@@ -18,7 +18,7 @@ interface FortniteItem {
     finalPrice: number;
     floorPrice: number;
   };
-  banner: string | null;
+  banner: string | null | any;
   granted: Array<{
     id: string;
     name: string;
@@ -121,9 +121,10 @@ export const FortniteShop = () => {
 
   const handlePurchase = (item: FortniteItem) => {
     const price = item.price?.finalPrice ?? item.finalPrice ?? 0;
+    const displayName = typeof item.displayName === 'string' ? item.displayName : 'Item';
     toast({
       title: "¡Contacta para comprar!",
-      description: `Producto: ${item.displayName} - ${price > 0 ? price + ' V-Bucks' : 'Gratis'}`,
+      description: `Producto: ${displayName} - ${price > 0 ? price + ' V-Bucks' : 'Gratis'}`,
     });
   };
 
@@ -199,11 +200,17 @@ export const FortniteShop = () => {
                             item.newDisplayAsset?.materialInstances?.[0]?.images?.OfferImage ||
                             mainItem?.images?.featured || 
                             mainItem?.images?.icon;
+            
+            // Ensure all display values are strings
+            const displayName = typeof item.displayName === 'string' ? item.displayName : (item.displayName?.name || 'Item sin nombre');
+            const displayDescription = typeof item.displayDescription === 'string' ? item.displayDescription : (mainItem?.description || 'Sin descripción');
+            const rarityText = typeof rarity === 'string' ? rarity : 'common';
+            const bannerText = typeof item.banner === 'string' ? item.banner : null;
 
             return (
               <Card 
                 key={item.mainId} 
-                className={`group relative overflow-hidden border-2 transition-all duration-300 hover:scale-105 hover:shadow-xl bg-gradient-to-br ${getRarityColor(rarity)}`}
+                className={`group relative overflow-hidden border-2 transition-all duration-300 hover:scale-105 hover:shadow-xl bg-gradient-to-br ${getRarityColor(rarityText)}`}
               >
                 <div className="absolute inset-0 bg-card/90 backdrop-blur-sm"></div>
                 <CardContent className="relative p-4">
@@ -211,7 +218,7 @@ export const FortniteShop = () => {
                     {itemImage ? (
                       <img 
                         src={itemImage} 
-                        alt={item.displayName}
+                        alt={displayName}
                         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                         onError={(e) => {
                           e.currentTarget.style.display = 'none';
@@ -226,22 +233,22 @@ export const FortniteShop = () => {
                   
                   <div className="space-y-2">
                     <div className="flex items-center justify-between">
-                      <span className={`text-xs px-2 py-1 rounded-full bg-gradient-to-r ${getRarityColor(rarity)} text-white font-medium`}>
-                        {rarity.charAt(0).toUpperCase() + rarity.slice(1)}
+                      <span className={`text-xs px-2 py-1 rounded-full bg-gradient-to-r ${getRarityColor(rarityText)} text-white font-medium`}>
+                        {rarityText.charAt(0).toUpperCase() + rarityText.slice(1)}
                       </span>
-                      {item.banner && (
+                      {bannerText && (
                         <span className="text-xs px-2 py-1 rounded bg-accent text-accent-foreground">
-                          {item.banner}
+                          {bannerText}
                         </span>
                       )}
                     </div>
                     
                     <h3 className="font-bold text-foreground text-sm line-clamp-2">
-                      {item.displayName}
+                      {displayName}
                     </h3>
                     
                     <p className="text-xs text-muted-foreground line-clamp-2">
-                      {item.displayDescription || mainItem?.description}
+                      {displayDescription}
                     </p>
                     
                      <div className="flex items-center justify-between pt-2">
