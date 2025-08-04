@@ -19,8 +19,6 @@ import fortniteImage from "@/assets/fortnite-product.jpg";
 import freefireImage from "@/assets/freefire-product.jpg";
 import minecraftImage from "@/assets/minecraft-product.jpg";
 const Index = () => {
-  const [filteredProducts, setFilteredProducts] = useState(() => products);
-  
   const products = [{
     title: "CLUB DE FORTNITE",
     subtitle: "Cuenta con Error",
@@ -62,6 +60,8 @@ const Index = () => {
     category: "minecraft",
     priceValue: 10
   }];
+
+  const [filteredProducts, setFilteredProducts] = useState(products);
   const reviews = [{
     name: "Carlos M.",
     rating: 5,
