@@ -7,7 +7,7 @@ import { ReviewForm } from "@/components/ReviewForm";
 import { Shield, Zap, Users, Star, ArrowLeft } from "lucide-react";
 import { useState } from "react";
 import heroImage from "@/assets/hero-professional.jpg";
-const fortniteImage = "/lovable-uploads/be8bcd3c-01a4-4f6e-b513-aa09208dc8e7.png";
+const fortniteImage = "/lovable-uploads/deaf7a90-011e-4ebf-8f94-15b2606530db.png";
 const freefireImage = "/lovable-uploads/eb5092b0-6bd5-4857-aea9-8d23475a831c.png";
 const minecraftImage = "/lovable-uploads/b9d8b6a8-8825-41ab-9395-3015803d2753.png";
 const Index = () => {
@@ -44,7 +44,7 @@ const Index = () => {
       title: "CLUB DE FORTNITE",
       subtitle: "Cuenta sin Error",
       description: "Cuenta premium sin errores, acceso completo a todos los beneficios del club. La opción más segura.",
-      price: "Desde $25",
+      price: "$4 USD • $85 MXN • 18 SOL • $19.000 COP",
       image: fortniteImage,
       category: "FORTNITE"
     }, {
