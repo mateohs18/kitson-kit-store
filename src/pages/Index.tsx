@@ -2,9 +2,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { ProductCard } from "@/components/ProductCard";
 import { ContactSection } from "@/components/ContactSection";
-import { FortniteShop } from "@/components/FortniteShop";
 import { Shield, Zap, Users, ArrowLeft } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-professional.jpg";
 const fortniteImage = "/lovable-uploads/deaf7a90-011e-4ebf-8f94-15b2606530db.png";
 const freefireImage = "/lovable-uploads/2e7f57ec-2038-4990-b90a-f42ff5d2fe88.png";
@@ -295,8 +295,47 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Fortnite Daily Shop */}
-      <FortniteShop />
+      {/* Fortnite Shop Preview */}
+      <section className="py-20 bg-gradient-to-b from-muted to-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+              🎮 Tienda Diaria de Fortnite
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
+              Descubre todos los skins, objetos y contenido disponible hoy en Fortnite. 
+              Actualizada diariamente con los mejores precios del mercado.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              <div className="bg-card/50 backdrop-blur-sm border border-border rounded-lg p-6">
+                <div className="text-4xl mb-4">🛡️</div>
+                <h3 className="text-lg font-semibold text-foreground mb-2">Skins Legendarios</h3>
+                <p className="text-muted-foreground text-sm">Los outfits más exclusivos</p>
+              </div>
+              
+              <div className="bg-card/50 backdrop-blur-sm border border-border rounded-lg p-6">
+                <div className="text-4xl mb-4">⛏️</div>
+                <h3 className="text-lg font-semibold text-foreground mb-2">Picos y Herramientas</h3>
+                <p className="text-muted-foreground text-sm">Equipamiento premium</p>
+              </div>
+              
+              <div className="bg-card/50 backdrop-blur-sm border border-border rounded-lg p-6">
+                <div className="text-4xl mb-4">💃</div>
+                <h3 className="text-lg font-semibold text-foreground mb-2">Emotes y Bailes</h3>
+                <p className="text-muted-foreground text-sm">Celebra con estilo</p>
+              </div>
+            </div>
+
+            <Link to="/fortniteshop">
+              <Button variant="gaming" size="xl" className="min-w-[250px]">
+                <Zap className="w-5 h-5 mr-2" />
+                Ver Tienda Completa
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* Contact Section */}
       <div id="contacto">
