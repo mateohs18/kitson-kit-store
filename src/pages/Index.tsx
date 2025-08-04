@@ -10,128 +10,116 @@ const freefireImage = "/lovable-uploads/2e7f57ec-2038-4990-b90a-f42ff5d2fe88.png
 const minecraftImage = "/lovable-uploads/b140701b-1020-4a3e-a660-58e9b7ef1c5a.png";
 const Index = () => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-
-  const categories = [
-    {
-      name: "FORTNITE",
-      image: fortniteImage,
-      description: "V-Bucks, Club de Fortnite y objetos exclusivos"
-    },
-    {
-      name: "FREE FIRE",
-      image: freefireImage,
-      description: "Diamantes y contenido premium"
-    },
-    {
-      name: "MINECRAFT",
-      image: minecraftImage,
-      description: "Minecoins, cuentas y Game Pass"
-    }
-  ];
-
+  const categories = [{
+    name: "FORTNITE",
+    image: fortniteImage,
+    description: "V-Bucks, Club de Fortnite y objetos exclusivos"
+  }, {
+    name: "FREE FIRE",
+    image: freefireImage,
+    description: "Diamantes y contenido premium"
+  }, {
+    name: "MINECRAFT",
+    image: minecraftImage,
+    description: "Minecoins, cuentas y Game Pass"
+  }];
   const products = [
-    // FORTNITE Category
-    {
-      title: "CLUB DE FORTNITE",
-      subtitle: "Cuenta con Error",
-      description: "Acceso completo al pase de batalla y contenido exclusivo. Método seguro sin riesgo para tu cuenta principal.",
-      price: "$5 USD • $105 MXN • 24 SOL • $24.000 COP",
-      image: fortniteImage,
-      category: "FORTNITE"
-    }, {
-      title: "CLUB DE FORTNITE",
-      subtitle: "Cuenta sin Error",
-      description: "Cuenta premium sin errores, acceso completo a todos los beneficios del club. La opción más segura.",
-      price: "$4 USD • $85 MXN • 18 SOL • $19.000 COP",
-      image: fortniteImage,
-      category: "FORTNITE"
-    }, {
-      title: "OBJETOS VIA REGALO",
-      subtitle: "Cualquier skin disponible",
-      description: "Recibe cualquier skin o item del juego directamente como regalo. 100% seguro y legal.",
-      price: "Varía",
-      image: fortniteImage,
-      category: "FORTNITE"
-    },
-    // FREE FIRE Category
-    {
-      title: "100 + 10 DIAMANTES",
-      subtitle: "FREE FIRE",
-      description: "110 diamantes totales para Free Fire con entrega inmediata. Sin baneos ni problemas.",
-      price: "$5",
-      image: freefireImage,
-      category: "FREE FIRE"
-    }, {
-      title: "310 + 31 DIAMANTES",
-      subtitle: "FREE FIRE",
-      description: "341 diamantes totales para Free Fire con entrega inmediata. Sin baneos ni problemas.",
-      price: "$15",
-      image: freefireImage,
-      category: "FREE FIRE"
-    }, {
-      title: "520 + 52 DIAMANTES",
-      subtitle: "FREE FIRE",
-      description: "572 diamantes totales para Free Fire con entrega inmediata. Sin baneos ni problemas.",
-      price: "$25",
-      image: freefireImage,
-      category: "FREE FIRE"
-    }, {
-      title: "1060 + 106 DIAMANTES",
-      subtitle: "FREE FIRE",
-      description: "1166 diamantes totales para Free Fire con entrega inmediata. Sin baneos ni problemas.",
-      price: "$50",
-      image: freefireImage,
-      category: "FREE FIRE"
-    }, {
-      title: "2180 + 218 DIAMANTES",
-      subtitle: "FREE FIRE",
-      description: "2398 diamantes totales para Free Fire con entrega inmediata. Sin baneos ni problemas.",
-      price: "$100",
-      image: freefireImage,
-      category: "FREE FIRE"
-    }, {
-      title: "5600 + 560 DIAMANTES",
-      subtitle: "FREE FIRE",
-      description: "6160 diamantes totales para Free Fire con entrega inmediata. Sin baneos ni problemas.",
-      price: "$250",
-      image: freefireImage,
-      category: "FREE FIRE"
-    },
-    // MINECRAFT Category
-    {
-      title: "MINECOINS",
-      subtitle: "Moneda oficial de Minecraft",
-      description: "Minecoins oficiales para comprar contenido en Minecraft Marketplace. Entrega rápida y segura.",
-      price: "Desde $10",
-      image: minecraftImage,
-      category: "MINECRAFT"
-    }, {
-      title: "MINECRAFT XBOX",
-      subtitle: "Game Pass Ultimate",
-      description: "Acceso completo a Minecraft Xbox con Game Pass Ultimate incluido. Compatible con Xbox Series X/S, Xbox One y PC Windows.",
-      price: "Desde $20",
-      image: minecraftImage,
-      category: "MINECRAFT"
-    }, {
-      title: "MINECRAFT PC",
-      subtitle: "Cuenta nueva",
-      description: "Cuenta nueva de Minecraft Java Edition para PC. Acceso completo y permanente al juego con tu propia cuenta.",
-      price: "Desde $30",
-      image: minecraftImage,
-      category: "MINECRAFT"
-    }
-  ];
-
-
+  // FORTNITE Category
+  {
+    title: "CLUB DE FORTNITE",
+    subtitle: "Cuenta con Error",
+    description: "Acceso completo al pase de batalla y contenido exclusivo. Método seguro sin riesgo para tu cuenta principal.",
+    price: "$5 USD • $105 MXN • 24 SOL • $24.000 COP",
+    image: fortniteImage,
+    category: "FORTNITE"
+  }, {
+    title: "CLUB DE FORTNITE",
+    subtitle: "Cuenta sin Error",
+    description: "Cuenta premium sin errores, acceso completo a todos los beneficios del club. La opción más segura.",
+    price: "$4 USD • $85 MXN • 18 SOL • $19.000 COP",
+    image: fortniteImage,
+    category: "FORTNITE"
+  }, {
+    title: "OBJETOS VIA REGALO",
+    subtitle: "Cualquier skin disponible",
+    description: "Recibe cualquier skin o item del juego directamente como regalo. 100% seguro y legal.",
+    price: "Varía",
+    image: fortniteImage,
+    category: "FORTNITE"
+  },
+  // FREE FIRE Category
+  {
+    title: "100 + 10 DIAMANTES",
+    subtitle: "FREE FIRE",
+    description: "110 diamantes totales para Free Fire con entrega inmediata. Sin baneos ni problemas.",
+    price: "$5",
+    image: freefireImage,
+    category: "FREE FIRE"
+  }, {
+    title: "310 + 31 DIAMANTES",
+    subtitle: "FREE FIRE",
+    description: "341 diamantes totales para Free Fire con entrega inmediata. Sin baneos ni problemas.",
+    price: "$15",
+    image: freefireImage,
+    category: "FREE FIRE"
+  }, {
+    title: "520 + 52 DIAMANTES",
+    subtitle: "FREE FIRE",
+    description: "572 diamantes totales para Free Fire con entrega inmediata. Sin baneos ni problemas.",
+    price: "$25",
+    image: freefireImage,
+    category: "FREE FIRE"
+  }, {
+    title: "1060 + 106 DIAMANTES",
+    subtitle: "FREE FIRE",
+    description: "1166 diamantes totales para Free Fire con entrega inmediata. Sin baneos ni problemas.",
+    price: "$50",
+    image: freefireImage,
+    category: "FREE FIRE"
+  }, {
+    title: "2180 + 218 DIAMANTES",
+    subtitle: "FREE FIRE",
+    description: "2398 diamantes totales para Free Fire con entrega inmediata. Sin baneos ni problemas.",
+    price: "$100",
+    image: freefireImage,
+    category: "FREE FIRE"
+  }, {
+    title: "5600 + 560 DIAMANTES",
+    subtitle: "FREE FIRE",
+    description: "6160 diamantes totales para Free Fire con entrega inmediata. Sin baneos ni problemas.",
+    price: "$250",
+    image: freefireImage,
+    category: "FREE FIRE"
+  },
+  // MINECRAFT Category
+  {
+    title: "MINECOINS",
+    subtitle: "Moneda oficial de Minecraft",
+    description: "Minecoins oficiales para comprar contenido en Minecraft Marketplace. Entrega rápida y segura.",
+    price: "Desde $10",
+    image: minecraftImage,
+    category: "MINECRAFT"
+  }, {
+    title: "MINECRAFT XBOX",
+    subtitle: "Game Pass Ultimate",
+    description: "Acceso completo a Minecraft Xbox con Game Pass Ultimate incluido. Compatible con Xbox Series X/S, Xbox One y PC Windows.",
+    price: "Desde $20",
+    image: minecraftImage,
+    category: "MINECRAFT"
+  }, {
+    title: "MINECRAFT PC",
+    subtitle: "Cuenta nueva",
+    description: "Cuenta nueva de Minecraft Java Edition para PC. Acceso completo y permanente al juego con tu propia cuenta.",
+    price: "Desde $30",
+    image: minecraftImage,
+    category: "MINECRAFT"
+  }];
   const scrollToProducts = () => {
     document.getElementById('productos')?.scrollIntoView({
       behavior: 'smooth'
     });
   };
-
-  const filteredProducts = selectedCategory 
-    ? products.filter(product => product.category === selectedCategory)
-    : [];
+  const filteredProducts = selectedCategory ? products.filter(product => product.category === selectedCategory) : [];
   return <div className="min-h-screen bg-background">
       {/* Header */}
       <Header />
@@ -212,22 +200,14 @@ const Index = () => {
             </p>
           </div>
 
-          {!selectedCategory ? (
-            // Show Categories
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {categories.map((category, index) => (
-                <div
-                  key={category.name}
-                  onClick={() => setSelectedCategory(category.name)}
-                  className="group cursor-pointer bg-card border-border hover:border-primary/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl animate-fade-in rounded-lg overflow-hidden"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
+          {!selectedCategory ?
+        // Show Categories
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {categories.map((category, index) => <div key={category.name} onClick={() => setSelectedCategory(category.name)} className="group cursor-pointer bg-card border-border hover:border-primary/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl animate-fade-in rounded-lg overflow-hidden" style={{
+            animationDelay: `${index * 0.1}s`
+          }}>
                   <div className="relative overflow-hidden">
-                    <img 
-                      src={category.image} 
-                      alt={category.name}
-                      className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
-                    />
+                    <img src={category.image} alt={category.name} className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                       <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">
@@ -238,18 +218,12 @@ const Index = () => {
                       </p>
                     </div>
                   </div>
-                </div>
-              ))}
-            </div>
-          ) : (
-            // Show Products for selected category
-            <div className="space-y-8">
+                </div>)}
+            </div> :
+        // Show Products for selected category
+        <div className="space-y-8">
               <div className="flex items-center gap-4 mb-8">
-                <Button
-                  variant="outline"
-                  onClick={() => setSelectedCategory(null)}
-                  className="flex items-center gap-2"
-                >
+                <Button variant="outline" onClick={() => setSelectedCategory(null)} className="flex items-center gap-2">
                   <ArrowLeft className="w-4 h-4" />
                   Volver a categorías
                 </Button>
@@ -258,8 +232,7 @@ const Index = () => {
                 </h3>
               </div>
               
-              {selectedCategory === "FORTNITE" && (
-                <div className="bg-card border border-border rounded-lg p-6 mb-8">
+              {selectedCategory === "FORTNITE" && <div className="bg-card border border-border rounded-lg p-6 mb-8">
                   <h4 className="text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
                     <Shield className="w-5 h-5 text-primary" />
                     ¿Qué es el Error de Región?
@@ -269,16 +242,12 @@ const Index = () => {
                     saltando completamente ese error. <span className="text-primary font-medium">Sin riesgo ni métodos raros</span> - 
                     proceso 100% seguro y confiable.
                   </p>
-                </div>
-              )}
+                </div>}
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredProducts.map((product, index) => (
-                  <ProductCard key={index} {...product} />
-                ))}
+                {filteredProducts.map((product, index) => <ProductCard key={index} {...product} />)}
               </div>
-            </div>
-          )}
+            </div>}
         </div>
       </section>
 
@@ -315,7 +284,7 @@ const Index = () => {
                     <Shield className="w-8 h-8 text-primary" />
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold text-foreground">🔒 Confianza y Seguridad</h4>
+                    <h4 className="text-xl font-bold text-foreground">Confianza y Seguridad</h4>
                   </div>
                 </div>
                 <p className="text-muted-foreground leading-relaxed">
@@ -323,13 +292,15 @@ const Index = () => {
                 </p>
               </div>
 
-              <div className="bg-card border border-border rounded-lg p-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <div className="bg-card border border-border rounded-lg p-8 animate-fade-in" style={{
+              animationDelay: '0.2s'
+            }}>
                 <div className="flex items-center gap-4 mb-6">
                   <div className="p-3 bg-accent/10 rounded-full">
                     <Zap className="w-8 h-8 text-accent" />
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold text-foreground">💎 Ofertas Exclusivas</h4>
+                    <h4 className="text-xl font-bold text-foreground">Ofertas Exclusivas</h4>
                   </div>
                 </div>
                 <p className="text-muted-foreground leading-relaxed">
