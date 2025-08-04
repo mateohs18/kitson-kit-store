@@ -5,17 +5,17 @@ export const ContactSection = () => {
   const handleContact = (platform: string) => {
     const message = "Hola! Me gustaría conocer más sobre sus productos digitales para gaming.";
     switch (platform) {
-      case 'whatsapp':
-        window.open(`https://wa.me/1234567890?text=${encodeURIComponent(message)}`, '_blank');
-        break;
       case 'facebook':
-        window.open('https://m.me/kitsonkit', '_blank');
-        break;
-      case 'instagram':
-        window.open('https://ig.me/m/kitsonkit', '_blank');
+        window.open('https://www.facebook.com/share/19pGami7Ab/', '_blank');
         break;
       case 'discord':
-        window.open('https://discord.gg/kitsonkit', '_blank');
+        window.open('https://discord.gg/gPumDeNvp6', '_blank');
+        break;
+      case 'instagram':
+        window.open('https://www.instagram.com/kitsonkit2.0?igsh=ZjNlaGcyaGp4ZnM5', '_blank');
+        break;
+      case 'whatsapp':
+        window.open('https://wa.me/573156098437', '_blank');
         break;
     }
   };
@@ -78,14 +78,14 @@ export const ContactSection = () => {
                 </Button>
                 
                 <div className="grid grid-cols-3 gap-2">
-                  <Button variant="social" className="flex-1" onClick={() => handleContact('whatsapp')}>
-                    <MessageCircle className="w-4 h-4" />
-                  </Button>
                   <Button variant="social" className="flex-1" onClick={() => handleContact('facebook')}>
                     <Facebook className="w-4 h-4" />
                   </Button>
                   <Button variant="social" className="flex-1" onClick={() => handleContact('instagram')}>
                     <Instagram className="w-4 h-4" />
+                  </Button>
+                  <Button variant="social" className="flex-1" onClick={() => handleContact('whatsapp')}>
+                    <MessageCircle className="w-4 h-4" />
                   </Button>
                 </div>
               </div>
