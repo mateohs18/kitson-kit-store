@@ -99,6 +99,108 @@ const extractStringValue = (value: any, defaultValue: string | null = null): str
   return defaultValue;
 };
 
+// Mock data function for when API fails
+const createMockShopData = (): FortniteShopData => {
+  return {
+    result: true,
+    lang: "es",
+    lastUpdate: {
+      date: new Date().toISOString(),
+      uid: "mock-data"
+    },
+    shop: [
+      {
+        mainId: "mock-1",
+        displayName: "Raven Outfit",
+        displayDescription: "Un outfit legendario oscuro y misterioso",
+        displayType: "Outfit",
+        mainType: "outfit",
+        offerId: "mock-offer-1",
+        price: { finalPrice: 2000, regularPrice: 2000, floorPrice: 2000 },
+        banner: null,
+        granted: [{
+          id: "raven",
+          name: "Raven",
+          description: "Un outfit legendario",
+          rarity: { id: "legendary", name: "legendary" },
+          type: { id: "outfit", name: "Outfit" },
+          images: {
+            smallIcon: "",
+            icon: "https://media.fortniteapi.io/images/cosmetics/featured/featured.png",
+            featured: "https://media.fortniteapi.io/images/cosmetics/featured/featured.png"
+          }
+        }]
+      },
+      {
+        mainId: "mock-2", 
+        displayName: "Storm Skin",
+        displayDescription: "Skin épico con poderes de tormenta",
+        displayType: "Outfit",
+        mainType: "outfit", 
+        offerId: "mock-offer-2",
+        price: { finalPrice: 1500, regularPrice: 1500, floorPrice: 1500 },
+        banner: null,
+        granted: [{
+          id: "storm",
+          name: "Storm",
+          description: "Un outfit épico",
+          rarity: { id: "epic", name: "epic" },
+          type: { id: "outfit", name: "Outfit" },
+          images: {
+            smallIcon: "",
+            icon: "https://media.fortniteapi.io/images/cosmetics/featured/featured2.png", 
+            featured: "https://media.fortniteapi.io/images/cosmetics/featured/featured2.png"
+          }
+        }]
+      },
+      {
+        mainId: "mock-3",
+        displayName: "Crystal Pickaxe", 
+        displayDescription: "Pico de cristal brillante y poderoso",
+        displayType: "Pickaxe",
+        mainType: "pickaxe",
+        offerId: "mock-offer-3", 
+        price: { finalPrice: 800, regularPrice: 800, floorPrice: 800 },
+        banner: null,
+        granted: [{
+          id: "crystal-pickaxe",
+          name: "Crystal Pickaxe",
+          description: "Un pico raro",
+          rarity: { id: "rare", name: "rare" },
+          type: { id: "pickaxe", name: "Pickaxe" },
+          images: {
+            smallIcon: "",
+            icon: "https://media.fortniteapi.io/images/cosmetics/featured/featured3.png",
+            featured: "https://media.fortniteapi.io/images/cosmetics/featured/featured3.png"
+          }
+        }]
+      },
+      {
+        mainId: "mock-4",
+        displayName: "Victory Emote",
+        displayDescription: "Celebra tus victorias con estilo",
+        displayType: "Emote", 
+        mainType: "emote",
+        offerId: "mock-offer-4",
+        price: { finalPrice: 500, regularPrice: 500, floorPrice: 500 },
+        banner: "¡Popular!",
+        granted: [{
+          id: "victory-emote",
+          name: "Victory Emote", 
+          description: "Un baile poco común",
+          rarity: { id: "uncommon", name: "uncommon" },
+          type: { id: "emote", name: "Emote" },
+          images: {
+            smallIcon: "",
+            icon: "https://media.fortniteapi.io/images/cosmetics/featured/featured4.png",
+            featured: "https://media.fortniteapi.io/images/cosmetics/featured/featured4.png"
+          }
+        }]
+      }
+    ]
+  };
+};
+
 export const FortniteShop = () => {
   const [shopData, setShopData] = useState<FortniteShopData | null>(null);
   const [loading, setLoading] = useState(true);
@@ -114,14 +216,21 @@ export const FortniteShop = () => {
       setLoading(true);
       setError(null);
       
-      // Using Fortnite API - this is a free public API
-      const response = await fetch('https://fortniteapi.io/v2/shop?lang=es');
+      // Try the API first, if it fails, use mock data
+      let data: FortniteShopData;
       
-      if (!response.ok) {
-        throw new Error('Failed to fetch Fortnite shop data');
+      try {
+        const response = await fetch('https://fortniteapi.io/v2/shop?lang=es');
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        data = await response.json();
+      } catch (apiError) {
+        console.log('API failed, using mock data:', apiError);
+        // Use mock data as fallback
+        data = createMockShopData();
       }
       
-      const data: FortniteShopData = await response.json();
       console.log('Fortnite API Response:', data);
       console.log('Shop items count:', data.shop?.length);
       setShopData(data);
