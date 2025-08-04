@@ -7,9 +7,9 @@ import { ReviewForm } from "@/components/ReviewForm";
 import { Shield, Zap, Users, Star, ArrowLeft } from "lucide-react";
 import { useState } from "react";
 import heroImage from "@/assets/hero-professional.jpg";
-import fortniteImage from "@/assets/fortnite-product.jpg";
-import freefireImage from "@/assets/freefire-product.jpg";
-import minecraftImage from "@/assets/minecraft-product.jpg";
+const fortniteImage = "/lovable-uploads/be8bcd3c-01a4-4f6e-b513-aa09208dc8e7.png";
+const freefireImage = "/lovable-uploads/eb5092b0-6bd5-4857-aea9-8d23475a831c.png";
+const minecraftImage = "/lovable-uploads/b9d8b6a8-8825-41ab-9395-3015803d2753.png";
 const Index = () => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
