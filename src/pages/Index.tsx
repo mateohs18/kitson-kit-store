@@ -300,31 +300,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Reviews Section */}
-      <section id="reseñas" className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Lo que dicen nuestros clientes
-            </h2>
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <div className="flex">
-                {[...Array(5)].map((_, i) => <Star key={i} className="w-6 h-6 fill-accent text-accent" />)}
-              </div>
-              <span className="text-lg font-semibold text-foreground">5.0</span>
-              <span className="text-muted-foreground">• +1000 reseñas</span>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {reviews.map((review, index) => <ReviewCard key={index} {...review} />)}
-          </div>
-
-          <div className="max-w-md mx-auto">
-            <ReviewForm />
-          </div>
-        </div>
-      </section>
 
       {/* Contact Section */}
       <div id="contacto">
