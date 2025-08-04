@@ -5,7 +5,7 @@ import { ContactSection } from "@/components/ContactSection";
 import { ArrowLeft, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const fortniteImage = "/lovable-uploads/deaf7a90-011e-4ebf-8f94-15b2606530db.png";
+const fortniteImage = "/lovable-uploads/21320e0f-87f5-48a3-aedf-61ac568e15d9.png";
 
 const FortnitePage = () => {
   const fortniteProducts = [
