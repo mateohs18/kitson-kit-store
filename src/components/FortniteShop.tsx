@@ -80,6 +80,25 @@ interface FortniteShopData {
   };
 }
 
+// Helper function to safely extract string values from potentially complex objects
+const extractStringValue = (value: any, defaultValue: string | null = null): string | null => {
+  if (typeof value === 'string') {
+    return value;
+  }
+  if (typeof value === 'object' && value !== null) {
+    if (value.name && typeof value.name === 'string') {
+      return value.name;
+    }
+    if (value.text && typeof value.text === 'string') {
+      return value.text;
+    }
+    if (value.value && typeof value.value === 'string') {
+      return value.value;
+    }
+  }
+  return defaultValue;
+};
+
 export const FortniteShop = () => {
   const [shopData, setShopData] = useState<FortniteShopData | null>(null);
   const [loading, setLoading] = useState(true);
@@ -193,7 +212,20 @@ export const FortniteShop = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {itemsToShow.map((item) => {
             const mainItem = item.granted[0];
-            const rarity = mainItem?.rarity?.name || 'common';
+            
+            // Debug logging to find the problematic object
+            console.log('Item:', item.displayName, 'Rarity:', mainItem?.rarity);
+            
+            // More robust rarity handling
+            let rarityValue = 'common';
+            if (mainItem?.rarity) {
+              if (typeof mainItem.rarity === 'string') {
+                rarityValue = mainItem.rarity;
+              } else if (typeof mainItem.rarity === 'object' && mainItem.rarity.name) {
+                rarityValue = typeof mainItem.rarity.name === 'string' ? mainItem.rarity.name : 'common';
+              }
+            }
+            
             const finalPrice = item.price?.finalPrice ?? item.finalPrice ?? 0;
             const regularPrice = item.price?.regularPrice ?? item.regularPrice ?? finalPrice;
             const itemImage = item.displayAssets?.[0]?.url || 
@@ -201,11 +233,11 @@ export const FortniteShop = () => {
                             mainItem?.images?.featured || 
                             mainItem?.images?.icon;
             
-            // Ensure all display values are strings
-            const displayName = typeof item.displayName === 'string' ? item.displayName : (item.displayName?.name || 'Item sin nombre');
-            const displayDescription = typeof item.displayDescription === 'string' ? item.displayDescription : (mainItem?.description || 'Sin descripción');
-            const rarityText = typeof rarity === 'string' ? rarity : 'common';
-            const bannerText = typeof item.banner === 'string' ? item.banner : null;
+            // Ensure all display values are strings with more robust validation
+            const displayName = extractStringValue(item.displayName, 'Item sin nombre') || 'Item sin nombre';
+            const displayDescription = extractStringValue(item.displayDescription, 'Sin descripción') || extractStringValue(mainItem?.description, 'Sin descripción') || 'Sin descripción';
+            const rarityText = String(rarityValue);
+            const bannerText = item.banner ? extractStringValue(item.banner, '') : null;
 
             return (
               <Card 
