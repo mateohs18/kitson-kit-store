@@ -10,49 +10,98 @@ import fortniteImage from "@/assets/fortnite-product.jpg";
 import freefireImage from "@/assets/freefire-product.jpg";
 import minecraftImage from "@/assets/minecraft-product.jpg";
 const Index = () => {
-  const products = [{
-    title: "CLUB DE FORTNITE",
-    subtitle: "Cuenta con Error",
-    description: "Acceso completo al pase de batalla y contenido exclusivo. Método seguro sin riesgo para tu cuenta principal.",
-    price: "Desde $15",
-    image: fortniteImage,
-    category: "Fortnite"
-  }, {
-    title: "CLUB DE FORTNITE",
-    subtitle: "Cuenta sin Error",
-    description: "Cuenta premium sin errores, acceso completo a todos los beneficios del club. La opción más segura.",
-    price: "Desde $25",
-    image: fortniteImage,
-    category: "Fortnite"
-  }, {
-    title: "OBJETOS VIA REGALO",
-    subtitle: "Cualquier skin disponible",
-    description: "Recibe cualquier skin o item del juego directamente como regalo. 100% seguro y legal.",
-    price: "Varía",
-    image: fortniteImage,
-    category: "Fortnite"
-  }, {
-    title: "DIAMANTES FREE FIRE",
-    subtitle: "Recarga inmediata",
-    description: "Diamantes oficiales para Free Fire con entrega inmediata. Sin baneos ni problemas.",
-    price: "Desde $5",
-    image: freefireImage,
-    category: "Free Fire"
-  }, {
-    title: "MINECOINS",
-    subtitle: "Moneda oficial de Minecraft",
-    description: "Minecoins oficiales para comprar contenido en Minecraft Marketplace. Entrega rápida.",
-    price: "Desde $10",
-    image: minecraftImage,
-    category: "Minecraft"
-  }, {
-    title: "MINECRAFT XBOX",
-    subtitle: "Game Pass y contenido premium",
-    description: "Acceso completo a Minecraft Xbox con Game Pass Ultimate y contenido exclusivo. Compatible con Xbox y PC.",
-    price: "Desde $20",
-    image: minecraftImage,
-    category: "Minecraft"
-  }];
+  const products = [
+    // FORTNITE Category
+    {
+      title: "CLUB DE FORTNITE",
+      subtitle: "Cuenta con Error",
+      description: "Acceso completo al pase de batalla y contenido exclusivo. Método seguro sin riesgo para tu cuenta principal.",
+      price: "Desde $15",
+      image: fortniteImage,
+      category: "FORTNITE"
+    }, {
+      title: "CLUB DE FORTNITE",
+      subtitle: "Cuenta sin Error",
+      description: "Cuenta premium sin errores, acceso completo a todos los beneficios del club. La opción más segura.",
+      price: "Desde $25",
+      image: fortniteImage,
+      category: "FORTNITE"
+    }, {
+      title: "OBJETOS VIA REGALO",
+      subtitle: "Cualquier skin disponible",
+      description: "Recibe cualquier skin o item del juego directamente como regalo. 100% seguro y legal.",
+      price: "Varía",
+      image: fortniteImage,
+      category: "FORTNITE"
+    },
+    // FREE FIRE Category
+    {
+      title: "100 + 10 DIAMANTES",
+      subtitle: "FREE FIRE",
+      description: "110 diamantes totales para Free Fire con entrega inmediata. Sin baneos ni problemas.",
+      price: "$5",
+      image: freefireImage,
+      category: "FREE FIRE"
+    }, {
+      title: "310 + 31 DIAMANTES",
+      subtitle: "FREE FIRE",
+      description: "341 diamantes totales para Free Fire con entrega inmediata. Sin baneos ni problemas.",
+      price: "$15",
+      image: freefireImage,
+      category: "FREE FIRE"
+    }, {
+      title: "520 + 52 DIAMANTES",
+      subtitle: "FREE FIRE",
+      description: "572 diamantes totales para Free Fire con entrega inmediata. Sin baneos ni problemas.",
+      price: "$25",
+      image: freefireImage,
+      category: "FREE FIRE"
+    }, {
+      title: "1060 + 106 DIAMANTES",
+      subtitle: "FREE FIRE",
+      description: "1166 diamantes totales para Free Fire con entrega inmediata. Sin baneos ni problemas.",
+      price: "$50",
+      image: freefireImage,
+      category: "FREE FIRE"
+    }, {
+      title: "2180 + 218 DIAMANTES",
+      subtitle: "FREE FIRE",
+      description: "2398 diamantes totales para Free Fire con entrega inmediata. Sin baneos ni problemas.",
+      price: "$100",
+      image: freefireImage,
+      category: "FREE FIRE"
+    }, {
+      title: "5600 + 560 DIAMANTES",
+      subtitle: "FREE FIRE",
+      description: "6160 diamantes totales para Free Fire con entrega inmediata. Sin baneos ni problemas.",
+      price: "$250",
+      image: freefireImage,
+      category: "FREE FIRE"
+    },
+    // MINECRAFT Category
+    {
+      title: "MINECOINS",
+      subtitle: "Moneda oficial de Minecraft",
+      description: "Minecoins oficiales para comprar contenido en Minecraft Marketplace. Entrega rápida y segura.",
+      price: "Desde $10",
+      image: minecraftImage,
+      category: "MINECRAFT"
+    }, {
+      title: "MINECRAFT XBOX",
+      subtitle: "Game Pass Ultimate",
+      description: "Acceso completo a Minecraft Xbox con Game Pass Ultimate incluido. Compatible con Xbox Series X/S, Xbox One y PC Windows.",
+      price: "Desde $20",
+      image: minecraftImage,
+      category: "MINECRAFT"
+    }, {
+      title: "MINECRAFT PC",
+      subtitle: "Cuenta nueva",
+      description: "Cuenta nueva de Minecraft Java Edition para PC. Acceso completo y permanente al juego con tu propia cuenta.",
+      price: "Desde $30",
+      image: minecraftImage,
+      category: "MINECRAFT"
+    }
+  ];
   const reviews = [{
     name: "Carlos M.",
     rating: 5,
