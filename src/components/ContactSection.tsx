@@ -1,10 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Shield, Clock, Award } from "lucide-react";
+import { Shield, Clock, Award, Facebook, MessageCircle, Instagram } from "lucide-react";
 import discordIcon from "@/assets/discord-icon.png";
-import whatsappIcon from "@/assets/whatsapp-icon.png";
-import facebookIcon from "@/assets/facebook-icon.png";
-import instagramIcon from "@/assets/instagram-icon.png";
 export const ContactSection = () => {
   const handleContact = (platform: string) => {
     const message = "Hola! Me gustaría conocer más sobre sus productos digitales para gaming.";
@@ -77,7 +74,7 @@ export const ContactSection = () => {
               
               <div className="space-y-4 mb-8">
                 <Button variant="gaming" size="xl" className="w-full" onClick={() => handleContact('facebook')}>
-                  <img src={facebookIcon} alt="Facebook" className="w-5 h-5 filter brightness-0 invert" />
+                  <Facebook className="w-5 h-5" />
                   Facebook
                 </Button>
                 
@@ -86,10 +83,10 @@ export const ContactSection = () => {
                     <img src={discordIcon} alt="Discord" className="w-4 h-4 filter brightness-0 invert" />
                   </Button>
                   <Button variant="social" className="flex-1" onClick={() => handleContact('instagram')}>
-                    <img src={instagramIcon} alt="Instagram" className="w-4 h-4 filter brightness-0 invert" />
+                    <Instagram className="w-4 h-4" />
                   </Button>
                   <Button variant="social" className="flex-1" onClick={() => handleContact('whatsapp')}>
-                    <img src={whatsappIcon} alt="WhatsApp" className="w-4 h-4 filter brightness-0 invert" />
+                    <MessageCircle className="w-4 h-4" />
                   </Button>
                 </div>
               </div>
