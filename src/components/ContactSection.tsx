@@ -81,13 +81,13 @@ export const ContactSection = () => {
                 
                 <div className="grid grid-cols-3 gap-2">
                   <Button variant="social" className="flex-1" onClick={() => handleContact('discord')}>
-                    <img src={discordLogo} alt="Discord" className="w-4 h-4" />
+                    <img src={discordLogo} alt="Discord" className="w-4 h-4 filter brightness-0 invert" />
                   </Button>
                   <Button variant="social" className="flex-1" onClick={() => handleContact('instagram')}>
                     <Instagram className="w-4 h-4" />
                   </Button>
                   <Button variant="social" className="flex-1" onClick={() => handleContact('whatsapp')}>
-                    <img src={whatsappLogo} alt="WhatsApp" className="w-4 h-4" />
+                    <img src={whatsappLogo} alt="WhatsApp" className="w-4 h-4 filter brightness-0 invert" />
                   </Button>
                 </div>
               </div>

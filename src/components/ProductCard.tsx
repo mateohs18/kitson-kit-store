@@ -79,7 +79,7 @@ export const ProductCard = ({ title, subtitle, description, price, image, catego
                 size="sm"
                 onClick={() => handleContact('discord')}
               >
-                <img src={discordLogo} alt="Discord" className="w-4 h-4" />
+                <img src={discordLogo} alt="Discord" className="w-4 h-4 filter brightness-0 invert" />
               </Button>
               <Button 
                 variant="social" 
@@ -93,7 +93,7 @@ export const ProductCard = ({ title, subtitle, description, price, image, catego
                 size="sm"
                 onClick={() => handleContact('whatsapp')}
               >
-                <img src={whatsappLogo} alt="WhatsApp" className="w-4 h-4" />
+                <img src={whatsappLogo} alt="WhatsApp" className="w-4 h-4 filter brightness-0 invert" />
               </Button>
             </div>
           </div>
