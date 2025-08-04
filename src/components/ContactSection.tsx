@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { MessageCircle, Instagram, Facebook, Shield, Clock, Award } from "lucide-react";
+import { MessageCircle, Instagram, Facebook, Shield, Clock, Award, Bot } from "lucide-react";
 export const ContactSection = () => {
   const handleContact = (platform: string) => {
     const message = "Hola! Me gustaría conocer más sobre sus productos digitales para gaming.";
@@ -13,6 +13,9 @@ export const ContactSection = () => {
         break;
       case 'instagram':
         window.open('https://ig.me/m/kitsonkit', '_blank');
+        break;
+      case 'discord':
+        window.open('https://discord.gg/kitsonkit', '_blank');
         break;
     }
   };
@@ -69,19 +72,20 @@ export const ContactSection = () => {
               </h3>
               
               <div className="space-y-4 mb-8">
-                <Button variant="gaming" size="xl" className="w-full" onClick={() => handleContact('whatsapp')}>
-                  <MessageCircle className="w-5 h-5" />
-                  WhatsApp
+                <Button variant="gaming" size="xl" className="w-full" onClick={() => handleContact('discord')}>
+                  <Bot className="w-5 h-5" />
+                  Discord
                 </Button>
                 
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-3 gap-2">
+                  <Button variant="social" className="flex-1" onClick={() => handleContact('whatsapp')}>
+                    <MessageCircle className="w-4 h-4" />
+                  </Button>
                   <Button variant="social" className="flex-1" onClick={() => handleContact('facebook')}>
-                    <Facebook className="w-5 h-5" />
-                    Facebook
+                    <Facebook className="w-4 h-4" />
                   </Button>
                   <Button variant="social" className="flex-1" onClick={() => handleContact('instagram')}>
-                    <Instagram className="w-5 h-5" />
-                    Instagram
+                    <Instagram className="w-4 h-4" />
                   </Button>
                 </div>
               </div>

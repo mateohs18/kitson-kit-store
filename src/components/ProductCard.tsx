@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Instagram, Facebook } from "lucide-react";
+import { MessageCircle, Instagram, Facebook, Bot } from "lucide-react";
 
 interface ProductCardProps {
   title: string;
@@ -24,6 +24,9 @@ export const ProductCard = ({ title, subtitle, description, price, image, catego
         break;
       case 'instagram':
         window.open('https://ig.me/m/kitsonkit', '_blank');
+        break;
+      case 'discord':
+        window.open('https://discord.gg/kitsonkit', '_blank');
         break;
     }
   };
@@ -62,9 +65,9 @@ export const ProductCard = ({ title, subtitle, description, price, image, catego
               variant="gaming" 
               size="sm" 
               className="flex-1"
-              onClick={() => handleContact('whatsapp')}
+              onClick={() => handleContact('discord')}
             >
-              <MessageCircle className="w-4 h-4" />
+              <Bot className="w-4 h-4" />
               Comprar
             </Button>
             

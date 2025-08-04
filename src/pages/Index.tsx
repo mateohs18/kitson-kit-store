@@ -45,6 +45,13 @@ const Index = () => {
     price: "Desde $10",
     image: minecraftImage,
     category: "Minecraft"
+  }, {
+    title: "MINECRAFT XBOX",
+    subtitle: "Game Pass y contenido premium",
+    description: "Acceso completo a Minecraft Xbox con Game Pass Ultimate y contenido exclusivo. Compatible con Xbox y PC.",
+    price: "Desde $20",
+    image: minecraftImage,
+    category: "Minecraft"
   }];
   const reviews = [{
     name: "Carlos M.",
