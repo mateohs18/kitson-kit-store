@@ -8,60 +8,46 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Professional Dark Theme */
-    --background: 222 14% 8%;
-    --foreground: 210 20% 95%;
+    --background: 220 15% 6%;
+    --foreground: 0 0% 98%;
 
-    --card: 222 14% 10%;
-    --card-foreground: 210 20% 95%;
+    --card: 220 14% 8%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 222 14% 10%;
-    --popover-foreground: 210 20% 95%;
+    --popover: 220 14% 8%;
+    --popover-foreground: 0 0% 98%;
 
-    /* Professional Blue-Grey Primary */
-    --primary: 217 91% 60%;
-    --primary-foreground: 222 14% 8%;
+    --primary: 37 88% 45%;
+    --primary-foreground: 0 0% 98%;
 
-    /* Elegant Secondary */
-    --secondary: 215 25% 27%;
-    --secondary-foreground: 210 20% 95%;
+    --secondary: 207 63% 42%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 222 14% 15%;
-    --muted-foreground: 215 15% 70%;
+    --muted: 220 14% 12%;
+    --muted-foreground: 0 0% 82%;
 
-    /* Professional Accent - Subtle Teal */
-    --accent: 173 80% 40%;
-    --accent-foreground: 222 14% 8%;
+    --accent: 52 100% 50%;
+    --accent-foreground: 220 15% 6%;
 
-    --accent-strong: 173 90% 35%;
-    --neutral: 215 15% 70%;
+    --accent-strong: 56 95% 50%;
+    --neutral: 0 0% 82%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 20% 95%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 222 14% 18%;
-    --input: 222 14% 15%;
-    --ring: 217 91% 60%;
+    --border: 220 14% 15%;
+    --input: 220 14% 12%;
+    --ring: 37 88% 45%;
 
-    /* Professional Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(173 80% 40%));
-    --gradient-secondary: linear-gradient(135deg, hsl(215 25% 27%), hsl(222 14% 15%));
-    --gradient-hero: linear-gradient(135deg, hsl(222 14% 8%) 0%, hsl(222 14% 10%) 50%, hsl(215 25% 27%) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(222 14% 10%) 0%, hsl(222 14% 12%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(37 88% 45%), hsl(52 100% 50%));
+    --gradient-gaming: linear-gradient(135deg, hsl(220 15% 6%), hsl(207 63% 42%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 15% 6%) 0%, hsl(220 14% 8%) 50%, hsl(207 63% 42%) 100%);
     
-    /* Professional Shadows */
-    --shadow-sm: 0 2px 4px hsl(222 14% 8% / 0.1);
-    --shadow-md: 0 4px 12px hsl(222 14% 8% / 0.15);
-    --shadow-lg: 0 8px 25px hsl(222 14% 8% / 0.2);
-    --shadow-glow: 0 0 20px hsl(217 91% 60% / 0.15);
-    --shadow-premium: 0 10px 40px hsl(222 14% 8% / 0.3);
-    
-    /* Smooth Professional Transitions */
+    --shadow-glow: 0 0 40px hsl(37 88% 45% / 0.3);
+    --shadow-premium: 0 10px 30px -10px hsl(220 15% 6% / 0.8);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -126,53 +112,5 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-feature-settings: "rlig" 1, "calt" 1;
-  }
-  
-  /* Professional scrollbar */
-  ::-webkit-scrollbar {
-    width: 6px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: hsl(var(--muted));
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: hsl(var(--border));
-    border-radius: 3px;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: hsl(var(--primary) / 0.8);
-  }
-}
-
-@layer components {
-  /* Professional glass effect */
-  .glass {
-    @apply bg-card/80 backdrop-blur-sm border border-border/50;
-  }
-  
-  .glass-strong {
-    @apply bg-card/90 backdrop-blur-md border border-border;
-  }
-  
-  /* Professional shadows */
-  .shadow-professional {
-    box-shadow: var(--shadow-lg);
-  }
-  
-  .shadow-glow-subtle {
-    box-shadow: var(--shadow-glow);
-  }
-  
-  /* Professional text gradients */
-  .text-gradient-primary {
-    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
-  }
-  
-  .text-gradient-subtle {
-    @apply bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent;
   }
 }

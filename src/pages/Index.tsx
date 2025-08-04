@@ -181,24 +181,24 @@ const Index = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
-              <Button variant="professional" size="xl" onClick={scrollToProducts} className="min-w-[200px] shadow-lg">
+              <Button variant="gaming" size="xl" onClick={scrollToProducts} className="min-w-[200px]">
                 <Zap className="w-5 h-5" />
                 Ver Productos
               </Button>
-              <Button variant="elegant" size="xl" className="min-w-[200px]">
+              <Button variant="secondary" size="xl" className="min-w-[200px]">
                 <Shield className="w-5 h-5" />
                 ¿Por qué elegirnos?
               </Button>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-card/70 backdrop-blur-sm border border-border rounded-xl p-8 animate-float hover:shadow-lg transition-all duration-300">
+              <div className="bg-card/50 backdrop-blur-sm border border-border rounded-lg p-6 animate-float">
                 <Shield className="w-12 h-12 text-primary mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-foreground mb-2">100% Seguro</h3>
                 <p className="text-muted-foreground text-sm">Métodos legales, garantía total</p>
               </div>
               
-              <div className="bg-card/70 backdrop-blur-sm border border-border rounded-xl p-8 animate-float hover:shadow-lg transition-all duration-300" style={{
+              <div className="bg-card/50 backdrop-blur-sm border border-border rounded-lg p-6 animate-float" style={{
               animationDelay: '0.2s'
             }}>
                 <Zap className="w-12 h-12 text-accent mx-auto mb-4" />
@@ -206,7 +206,7 @@ const Index = () => {
                 <p className="text-muted-foreground text-sm">Productos en minutos</p>
               </div>
               
-              <div className="bg-card/70 backdrop-blur-sm border border-border rounded-xl p-8 animate-float hover:shadow-lg transition-all duration-300" style={{
+              <div className="bg-card/50 backdrop-blur-sm border border-border rounded-lg p-6 animate-float" style={{
               animationDelay: '0.4s'
             }}>
                 <Users className="w-12 h-12 text-secondary mx-auto mb-4" />
@@ -264,7 +264,7 @@ const Index = () => {
             <div className="space-y-8">
               <div className="flex items-center gap-4 mb-8">
                 <Button
-                  variant="elegant"
+                  variant="outline"
                   onClick={() => setSelectedCategory(null)}
                   className="flex items-center gap-2"
                 >
@@ -277,7 +277,7 @@ const Index = () => {
               </div>
               
               {selectedCategory === "FORTNITE" && (
-                <div className="bg-card/80 backdrop-blur-sm border border-border rounded-xl p-6 mb-8 shadow-sm">
+                <div className="bg-card border border-border rounded-lg p-6 mb-8">
                   <h4 className="text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
                     <Shield className="w-5 h-5 text-primary" />
                     ¿Qué es el Error de Región?
