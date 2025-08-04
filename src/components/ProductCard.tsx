@@ -1,6 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Instagram, Facebook, MessageSquare } from "lucide-react";
+import { Instagram, Facebook } from "lucide-react";
+import discordLogo from "@/assets/discord-logo.png";
+import whatsappLogo from "@/assets/whatsapp-logo.png";
 
 interface ProductCardProps {
   title: string;
@@ -77,7 +79,7 @@ export const ProductCard = ({ title, subtitle, description, price, image, catego
                 size="sm"
                 onClick={() => handleContact('discord')}
               >
-                <MessageSquare className="w-4 h-4" />
+                <img src={discordLogo} alt="Discord" className="w-4 h-4" />
               </Button>
               <Button 
                 variant="social" 
@@ -91,7 +93,7 @@ export const ProductCard = ({ title, subtitle, description, price, image, catego
                 size="sm"
                 onClick={() => handleContact('whatsapp')}
               >
-                <MessageCircle className="w-4 h-4" />
+                <img src={whatsappLogo} alt="WhatsApp" className="w-4 h-4" />
               </Button>
             </div>
           </div>
