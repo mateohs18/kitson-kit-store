@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { AuthDialog } from "@/components/AuthDialog";
 
 export const Header = () => {
   const scrollToProducts = () => {
@@ -30,21 +31,34 @@ export const Header = () => {
           </div>
 
           {/* Navigation */}
-          <nav className="flex items-center gap-4 md:gap-8">
+          <nav className="hidden md:flex items-center gap-8">
             <button 
               onClick={scrollToAbout}
-              className="text-muted-foreground hover:text-accent transition-colors text-xs md:text-sm font-medium uppercase tracking-wide"
+              className="text-muted-foreground hover:text-accent transition-colors text-sm font-medium uppercase tracking-wide"
             >
               Quienes Somos
             </button>
             <button 
               onClick={scrollToContact}
-              className="text-muted-foreground hover:text-accent transition-colors text-xs md:text-sm font-medium uppercase tracking-wide"
+              className="text-muted-foreground hover:text-accent transition-colors text-sm font-medium uppercase tracking-wide"
             >
               Contacto
             </button>
           </nav>
 
+          {/* Auth Buttons */}
+          <div className="flex items-center gap-3">
+            <AuthDialog mode="login">
+              <Button variant="outline" size="sm" className="hidden md:inline-flex">
+                Iniciar Sesión
+              </Button>
+            </AuthDialog>
+            <AuthDialog mode="register">
+              <Button variant="gaming" size="sm">
+                Registrarse
+              </Button>
+            </AuthDialog>
+          </div>
         </div>
       </div>
     </header>
