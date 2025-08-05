@@ -142,40 +142,11 @@ const Index = () => {
             />
           ))}
         </div>
-
-        {/* Logo Shadow Effect with Light Rays */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          {/* Light Rays */}
-          <div className="absolute w-96 h-96 animate-spin" style={{ animationDuration: '20s' }}>
-            {[...Array(12)].map((_, i) => (
-              <div
-                key={i}
-                className="absolute w-2 h-32 bg-gradient-to-t from-accent/20 via-accent/10 to-transparent origin-bottom"
-                style={{
-                  transform: `rotate(${i * 30}deg) translateX(-50%)`,
-                  left: '50%',
-                  bottom: '50%',
-                }}
-              />
-            ))}
-          </div>
-          
-          {/* Central Glow */}
-          <div className="w-80 h-80 rounded-full opacity-20 bg-gradient-radial from-accent/30 via-accent/10 to-transparent">
-            <div className="w-full h-full rounded-full flex items-center justify-center bg-gradient-to-br from-accent/10 to-primary/10 shadow-2xl shadow-accent/20">
-              <img 
-                src="/lovable-uploads/3869feb0-7ccb-431c-95b7-53b04dbb7fdf.png" 
-                alt="Kitson Kit Logo" 
-                className="w-32 h-32 opacity-40 rounded-full"
-              />
-            </div>
-          </div>
-        </div>
         
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto animate-fade-in">
             <div className="flex items-center justify-center gap-4 mb-6">
-              <img src="/lovable-uploads/3869feb0-7ccb-431c-95b7-53b04dbb7fdf.png" alt="Kitson Kit Logo" className="w-20 h-20 md:w-24 md:h-24 rounded-full animate-float border-2 border-accent/20" />
+              <img src="/lovable-uploads/3869feb0-7ccb-431c-95b7-53b04dbb7fdf.png" alt="Kitson Kit Logo" className="w-20 h-20 md:w-24 md:h-24 rounded-full animate-float" />
             </div>
             
             <h1 className="text-6xl md:text-8xl font-bold text-foreground mb-4">
