@@ -121,35 +121,14 @@ const Index = () => {
     });
   };
   const filteredProducts = selectedCategory ? products.filter(product => product.category === selectedCategory) : [];
-  return <div className="min-h-screen bg-background relative">
-      {/* Logo Watermark */}
-      <div 
-        className="fixed inset-0 pointer-events-none z-0"
-        style={{
-          backgroundImage: `url(${fortniteImage})`,
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: '40%',
-          opacity: 0.03,
-          filter: 'grayscale(100%)'
-        }}
-      />
+  return <div className="min-h-screen bg-background">
       {/* Header */}
       <Header />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-white">
-          <div 
-            className="absolute inset-0"
-            style={{
-              backgroundImage: `url(/lovable-uploads/3869feb0-7ccb-431c-95b7-53b04dbb7fdf.png)`,
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: '30%',
-              opacity: 0.05,
-              filter: 'grayscale(100%)'
-            }}
-          />
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+        backgroundImage: `url(${heroImage})`
+      }}>
           <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-background/95"></div>
         </div>
         
