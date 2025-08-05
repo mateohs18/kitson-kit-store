@@ -5,7 +5,7 @@ import { ContactSection } from "@/components/ContactSection";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const minecraftImage = "/lovable-uploads/2e978da3-b905-4a47-a8bb-b06143f020b2.png";
+const minecraftImage = "/lovable-uploads/b140701b-1020-4a3e-a660-58e9b7ef1c5a.png";
 
 const MinecraftPage = () => {
   const minecraftProducts = [
@@ -52,7 +52,7 @@ const MinecraftPage = () => {
           </div>
           
           <div className="text-center mb-16">
-            <img src={minecraftImage} alt="Minecraft" className="w-32 h-32 mx-auto mb-8 rounded-lg" />
+            <img src="/lovable-uploads/2e978da3-b905-4a47-a8bb-b06143f020b2.png" alt="Minecraft" className="w-32 h-32 mx-auto mb-8 rounded-lg" />
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4">
               MINECRAFT
             </h1>
