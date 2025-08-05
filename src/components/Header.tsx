@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { AuthDialog } from "@/components/AuthDialog";
 
 export const Header = () => {
   const scrollToProducts = () => {
@@ -47,12 +48,16 @@ export const Header = () => {
 
           {/* Auth Buttons */}
           <div className="flex items-center gap-3">
-            <Button variant="outline" size="sm" className="hidden md:inline-flex">
-              Iniciar Sesión
-            </Button>
-            <Button variant="gaming" size="sm">
-              Registrarse
-            </Button>
+            <AuthDialog mode="login">
+              <Button variant="outline" size="sm" className="hidden md:inline-flex">
+                Iniciar Sesión
+              </Button>
+            </AuthDialog>
+            <AuthDialog mode="register">
+              <Button variant="gaming" size="sm">
+                Registrarse
+              </Button>
+            </AuthDialog>
           </div>
         </div>
       </div>
