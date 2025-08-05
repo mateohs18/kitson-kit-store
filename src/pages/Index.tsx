@@ -121,7 +121,19 @@ const Index = () => {
     });
   };
   const filteredProducts = selectedCategory ? products.filter(product => product.category === selectedCategory) : [];
-  return <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background relative">
+      {/* Logo Watermark */}
+      <div 
+        className="fixed inset-0 pointer-events-none z-0"
+        style={{
+          backgroundImage: `url(${fortniteImage})`,
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: '40%',
+          opacity: 0.03,
+          filter: 'grayscale(100%)'
+        }}
+      />
       {/* Header */}
       <Header />
       {/* Hero Section */}
