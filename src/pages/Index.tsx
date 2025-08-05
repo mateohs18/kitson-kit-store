@@ -129,18 +129,12 @@ const Index = () => {
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background/90 to-primary/10">
           {/* Floating particles effect */}
-          {[...Array(20)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-2 h-2 bg-accent/30 rounded-full animate-float"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 3}s`,
-                animationDuration: `${3 + Math.random() * 2}s`
-              }}
-            />
-          ))}
+          {[...Array(20)].map((_, i) => <div key={i} className="absolute w-2 h-2 bg-accent/30 rounded-full animate-float" style={{
+          left: `${Math.random() * 100}%`,
+          top: `${Math.random() * 100}%`,
+          animationDelay: `${Math.random() * 3}s`,
+          animationDuration: `${3 + Math.random() * 2}s`
+        }} />)}
         </div>
         
         <div className="relative z-10 container mx-auto px-4 text-center pt-20 md:pt-16">
@@ -194,15 +188,11 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {categories.map((category, index) => {
-              const categoryRoute = category.name === "FORTNITE" ? "/fortnite" : 
-                                   category.name === "FREE FIRE" ? "/freefire" : 
-                                   "/minecraft";
-              
-              return (
-                <Link key={category.name} to={categoryRoute}>
+            const categoryRoute = category.name === "FORTNITE" ? "/fortnite" : category.name === "FREE FIRE" ? "/freefire" : "/minecraft";
+            return <Link key={category.name} to={categoryRoute}>
                   <div className="group cursor-pointer bg-card border-border hover:border-primary/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl animate-fade-in rounded-lg overflow-hidden" style={{
-                    animationDelay: `${index * 0.1}s`
-                  }}>
+                animationDelay: `${index * 0.1}s`
+              }}>
                     <div className="relative overflow-hidden">
                       <img src={category.image} alt={category.name} className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
@@ -216,9 +206,8 @@ const Index = () => {
                       </div>
                     </div>
                   </div>
-                </Link>
-              );
-            })}
+                </Link>;
+          })}
           </div>
         </div>
       </section>
@@ -260,7 +249,9 @@ const Index = () => {
                 </p>
               </div>
 
-              <div className="bg-card border border-border rounded-lg p-8 text-center animate-fade-in hover:shadow-lg transition-shadow" style={{animationDelay: '0.1s'}}>
+              <div className="bg-card border border-border rounded-lg p-8 text-center animate-fade-in hover:shadow-lg transition-shadow" style={{
+              animationDelay: '0.1s'
+            }}>
                 <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Star className="w-8 h-8 text-accent" />
                 </div>
@@ -270,7 +261,9 @@ const Index = () => {
                 </p>
               </div>
 
-              <div className="bg-card border border-border rounded-lg p-8 text-center animate-fade-in hover:shadow-lg transition-shadow" style={{animationDelay: '0.2s'}}>
+              <div className="bg-card border border-border rounded-lg p-8 text-center animate-fade-in hover:shadow-lg transition-shadow" style={{
+              animationDelay: '0.2s'
+            }}>
                 <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Award className="w-8 h-8 text-secondary" />
                 </div>
@@ -280,7 +273,9 @@ const Index = () => {
                 </p>
               </div>
 
-              <div className="bg-card border border-border rounded-lg p-8 text-center animate-fade-in hover:shadow-lg transition-shadow" style={{animationDelay: '0.3s'}}>
+              <div className="bg-card border border-border rounded-lg p-8 text-center animate-fade-in hover:shadow-lg transition-shadow" style={{
+              animationDelay: '0.3s'
+            }}>
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Clock className="w-8 h-8 text-primary" />
                 </div>
@@ -290,17 +285,19 @@ const Index = () => {
                 </p>
               </div>
 
-              <div className="bg-card border border-border rounded-lg p-8 text-center animate-fade-in hover:shadow-lg transition-shadow" style={{animationDelay: '0.4s'}}>
+              <div className="bg-card border border-border rounded-lg p-8 text-center animate-fade-in hover:shadow-lg transition-shadow" style={{
+              animationDelay: '0.4s'
+            }}>
                 <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Users className="w-8 h-8 text-accent" />
                 </div>
                 <h4 className="text-xl font-bold text-foreground mb-4">Experiencia</h4>
-                <p className="text-muted-foreground">
-                  Rica experiencia en la industria y conocimiento en servicios gaming.
-                </p>
+                <p className="text-muted-foreground">Experiencia en la industria y conocimiento en servicios gaming.</p>
               </div>
 
-              <div className="bg-card border border-border rounded-lg p-8 text-center animate-fade-in hover:shadow-lg transition-shadow" style={{animationDelay: '0.5s'}}>
+              <div className="bg-card border border-border rounded-lg p-8 text-center animate-fade-in hover:shadow-lg transition-shadow" style={{
+              animationDelay: '0.5s'
+            }}>
                 <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Zap className="w-8 h-8 text-secondary" />
                 </div>
