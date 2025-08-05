@@ -32,28 +32,16 @@ export const Header = () => {
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             <button 
-              onClick={scrollToProducts}
+              onClick={scrollToAbout}
               className="text-muted-foreground hover:text-accent transition-colors text-sm font-medium uppercase tracking-wide"
             >
-              🎮 Fortnite
-            </button>
-            <button 
-              onClick={scrollToProducts}
-              className="text-muted-foreground hover:text-accent transition-colors text-sm font-medium uppercase tracking-wide"
-            >
-              ⛏️ Minecraft
-            </button>
-            <button 
-              onClick={scrollToProducts}
-              className="text-muted-foreground hover:text-accent transition-colors text-sm font-medium uppercase tracking-wide"
-            >
-              🔥 Free Fire
+              Quienes Somos
             </button>
             <button 
               onClick={scrollToContact}
               className="text-muted-foreground hover:text-accent transition-colors text-sm font-medium uppercase tracking-wide"
             >
-              📞 Contacto
+              Contacto
             </button>
           </nav>
 
