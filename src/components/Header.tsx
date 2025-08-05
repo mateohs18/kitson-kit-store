@@ -26,7 +26,6 @@ export const Header = () => {
             />
             <div>
               <h1 className="text-xl font-bold text-foreground">KITSON KIT</h1>
-              <p className="text-xs text-accent uppercase tracking-wider">V2.0</p>
             </div>
           </div>
 

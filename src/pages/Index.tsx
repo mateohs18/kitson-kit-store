@@ -120,26 +120,9 @@ const Index = () => {
       behavior: 'smooth'
     });
   };
-  const targetDate = new Date(Date.now() + 3 * 24 * 60 * 60 * 1000 + 16 * 60 * 60 * 1000 + 41 * 60 * 1000);
-
   return <div className="min-h-screen bg-background">
       {/* Header */}
       <Header />
-      
-      {/* Special Offer Banner */}
-      <div className="fixed top-16 left-0 right-0 z-40 bg-gradient-to-r from-accent/20 via-accent/10 to-accent/20 border-b border-accent/20">
-        <div className="container mx-auto px-4 py-3">
-          <div className="flex items-center justify-center gap-6 text-sm">
-            <span className="text-accent font-bold uppercase tracking-wide">
-              🔥 OFERTA ESPECIAL - DESCUENTOS HASTA 50%
-            </span>
-            <CountdownTimer targetDate={targetDate} />
-            <Button variant="gaming" size="sm" onClick={scrollToProducts}>
-              Obtener descuento
-            </Button>
-          </div>
-        </div>
-      </div>
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -189,7 +172,7 @@ const Index = () => {
           </div>
         </div>
         
-        <div className="relative z-10 container mx-auto px-4 text-center mt-16">
+        <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto animate-fade-in">
             <div className="flex items-center justify-center gap-4 mb-6">
               <img src="/lovable-uploads/3869feb0-7ccb-431c-95b7-53b04dbb7fdf.png" alt="Kitson Kit Logo" className="w-20 h-20 md:w-24 md:h-24 rounded-full animate-float border-2 border-accent/20" />
@@ -199,7 +182,6 @@ const Index = () => {
               <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
                 KITSON KIT
               </span>
-              <span className="text-2xl md:text-3xl text-accent ml-4">V2.0</span>
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
