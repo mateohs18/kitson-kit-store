@@ -45,15 +45,6 @@ export const Header = () => {
             </button>
           </nav>
 
-          {/* Auth Buttons */}
-          <div className="flex items-center gap-3">
-            <Button variant="outline" size="sm" className="hidden md:inline-flex">
-              Iniciar Sesión
-            </Button>
-            <Button variant="gaming" size="sm">
-              Registrarse
-            </Button>
-          </div>
         </div>
       </div>
     </header>
