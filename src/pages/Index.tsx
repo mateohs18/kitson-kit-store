@@ -2,10 +2,10 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { ProductCard } from "@/components/ProductCard";
 import { ContactSection } from "@/components/ContactSection";
-import { Shield, Zap, Users, ArrowLeft, CheckCircle } from "lucide-react";
+import { CountdownTimer } from "@/components/CountdownTimer";
+import { Shield, Zap, Users, Star, Award, Clock } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-professional.jpg";
 const fortniteImage = "/lovable-uploads/21320e0f-87f5-48a3-aedf-61ac568e15d9.png";
 const freefireImage = "/lovable-uploads/bdce0646-48a6-4b27-a7bc-42ca95f856b7.png";
 const minecraftImage = "/lovable-uploads/722d514e-f2e2-4266-9825-97d3b17af36b.png";
@@ -120,12 +120,46 @@ const Index = () => {
       behavior: 'smooth'
     });
   };
-  const filteredProducts = selectedCategory ? products.filter(product => product.category === selectedCategory) : [];
+  const targetDate = new Date(Date.now() + 3 * 24 * 60 * 60 * 1000 + 16 * 60 * 60 * 1000 + 41 * 60 * 1000);
+
   return <div className="min-h-screen bg-background">
       {/* Header */}
       <Header />
+      
+      {/* Special Offer Banner */}
+      <div className="fixed top-16 left-0 right-0 z-40 bg-gradient-to-r from-accent/20 via-accent/10 to-accent/20 border-b border-accent/20">
+        <div className="container mx-auto px-4 py-3">
+          <div className="flex items-center justify-center gap-6 text-sm">
+            <span className="text-accent font-bold uppercase tracking-wide">
+              🔥 OFERTA ESPECIAL - DESCUENTOS HASTA 50%
+            </span>
+            <CountdownTimer targetDate={targetDate} />
+            <Button variant="gaming" size="sm" onClick={scrollToProducts}>
+              Obtener descuento
+            </Button>
+          </div>
+        </div>
+      </div>
+
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-background/90 to-primary/10">
+          {/* Floating particles effect */}
+          {[...Array(20)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-2 h-2 bg-accent/30 rounded-full animate-float"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 3}s`,
+                animationDuration: `${3 + Math.random() * 2}s`
+              }}
+            />
+          ))}
+        </div>
+
         {/* Logo Shadow Effect with Light Rays */}
         <div className="absolute inset-0 flex items-center justify-center">
           {/* Light Rays */}
@@ -133,7 +167,7 @@ const Index = () => {
             {[...Array(12)].map((_, i) => (
               <div
                 key={i}
-                className="absolute w-2 h-32 bg-gradient-to-t from-yellow-400/30 via-yellow-300/20 to-transparent origin-bottom"
+                className="absolute w-2 h-32 bg-gradient-to-t from-accent/20 via-accent/10 to-transparent origin-bottom"
                 style={{
                   transform: `rotate(${i * 30}deg) translateX(-50%)`,
                   left: '50%',
@@ -143,70 +177,51 @@ const Index = () => {
             ))}
           </div>
           
-          {/* Shadow Circle */}
-          <div className="w-80 h-80 rounded-full opacity-30 bg-gradient-radial from-yellow-200/40 via-gray-200/20 to-transparent">
-            <div className="w-full h-full rounded-full flex items-center justify-center bg-gradient-to-br from-yellow-300/20 to-gray-400/20 shadow-2xl shadow-yellow-200/20">
+          {/* Central Glow */}
+          <div className="w-80 h-80 rounded-full opacity-20 bg-gradient-radial from-accent/30 via-accent/10 to-transparent">
+            <div className="w-full h-full rounded-full flex items-center justify-center bg-gradient-to-br from-accent/10 to-primary/10 shadow-2xl shadow-accent/20">
               <img 
                 src="/lovable-uploads/3869feb0-7ccb-431c-95b7-53b04dbb7fdf.png" 
-                alt="Kitson Kit Logo Shadow" 
+                alt="Kitson Kit Logo" 
                 className="w-32 h-32 opacity-40 rounded-full"
               />
             </div>
           </div>
         </div>
         
-        <div className="relative z-10 container mx-auto px-4 text-center">
+        <div className="relative z-10 container mx-auto px-4 text-center mt-16">
           <div className="max-w-4xl mx-auto animate-fade-in">
-            <div className="flex items-center justify-center gap-4 mb-6 mt-16">
-              <img src="/lovable-uploads/3869feb0-7ccb-431c-95b7-53b04dbb7fdf.png" alt="Kitson Kit Logo" className="w-16 h-16 md:w-20 md:h-20 rounded-full animate-float" />
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <img src="/lovable-uploads/3869feb0-7ccb-431c-95b7-53b04dbb7fdf.png" alt="Kitson Kit Logo" className="w-20 h-20 md:w-24 md:h-24 rounded-full animate-float border-2 border-accent/20" />
             </div>
             
-            <h1 className="text-6xl md:text-8xl font-bold text-foreground mb-8">
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Kitson Kit
+            <h1 className="text-6xl md:text-8xl font-bold text-foreground mb-4">
+              <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
+                KITSON KIT
               </span>
+              <span className="text-2xl md:text-3xl text-accent ml-4">V2.0</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-              Los mejores productos digitales para gaming. +3 años ofreciendo 
-              <span className="text-accent font-semibold"> precios bajos</span>, 
-              <span className="text-primary font-semibold"> atención premium</span> y 
-              <span className="text-secondary font-semibold"> entrega rápida</span>.
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+              ¡No te pierdas! La oferta más grande del año – ¡solo por tiempo limitado!
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
-              <Button variant="gaming" size="xl" onClick={scrollToProducts} className="min-w-[200px]">
-                <Zap className="w-5 h-5" />
-                Ver Productos
-              </Button>
-              <Button variant="secondary" size="xl" className="min-w-[200px]">
-                <Shield className="w-5 h-5" />
-                ¿Por qué elegirnos?
-              </Button>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-card/50 backdrop-blur-sm border border-border rounded-lg p-6 animate-float">
-                <Shield className="w-12 h-12 text-primary mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-foreground mb-2">100% Seguro</h3>
-                <p className="text-muted-foreground text-sm">Métodos legales, garantía total</p>
-              </div>
-              
-              <div className="bg-card/50 backdrop-blur-sm border border-border rounded-lg p-6 animate-float" style={{
-              animationDelay: '0.2s'
-            }}>
-                <Zap className="w-12 h-12 text-accent mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-foreground mb-2">Entrega Rápida</h3>
-                <p className="text-muted-foreground text-sm">Productos en minutos</p>
-              </div>
-              
-              <div className="bg-card/50 backdrop-blur-sm border border-border rounded-lg p-6 animate-float" style={{
-              animationDelay: '0.4s'
-            }}>
-                <Users className="w-12 h-12 text-secondary mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-foreground mb-2">+3 Años</h3>
-                <p className="text-muted-foreground text-sm">Miles de clientes felices</p>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+              <Link to="/fortnite">
+                <Button variant="gaming" size="xl" className="min-w-[200px] text-lg">
+                  FORTNITE
+                </Button>
+              </Link>
+              <Link to="/minecraft">
+                <Button variant="secondary" size="xl" className="min-w-[200px] text-lg">
+                  MINECRAFT
+                </Button>
+              </Link>
+              <Link to="/freefire">
+                <Button variant="outline" size="xl" className="min-w-[200px] text-lg border-accent text-accent hover:bg-accent/10">
+                  FREE FIRE
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -277,38 +292,68 @@ const Index = () => {
 
             <div className="text-center mb-12">
               <h3 className="text-3xl font-bold text-foreground mb-8">
-                Lo que Priorizamos
+                Nuestros Valores
               </h3>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-card border border-border rounded-lg p-8 animate-fade-in">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="p-3 bg-primary/10 rounded-full">
-                    <Shield className="w-8 h-8 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-bold text-foreground">Confianza y Seguridad</h4>
-                  </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-card border border-border rounded-lg p-8 text-center animate-fade-in hover:shadow-lg transition-shadow">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Shield className="w-8 h-8 text-primary" />
                 </div>
-                <p className="text-muted-foreground leading-relaxed">
-                  Cada transacción se maneja de forma profesional y segura.
+                <h4 className="text-xl font-bold text-foreground mb-4">Profesionalismo</h4>
+                <p className="text-muted-foreground">
+                  Servicios de calidad con atención al detalle
                 </p>
               </div>
 
-              <div className="bg-card border border-border rounded-lg p-8 animate-fade-in" style={{
-              animationDelay: '0.2s'
-            }}>
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="p-3 bg-accent/10 rounded-full">
-                    <Zap className="w-8 h-8 text-accent" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-bold text-foreground">Ofertas Exclusivas</h4>
-                  </div>
+              <div className="bg-card border border-border rounded-lg p-8 text-center animate-fade-in hover:shadow-lg transition-shadow" style={{animationDelay: '0.1s'}}>
+                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Star className="w-8 h-8 text-accent" />
                 </div>
-                <p className="text-muted-foreground leading-relaxed">
-                  Obtén precios imbatibles en Juegos Servicios y Suscripciones para mejorar tu experiencia.
+                <h4 className="text-xl font-bold text-foreground mb-4">Seguridad</h4>
+                <p className="text-muted-foreground">
+                  Tu seguridad es nuestra prioridad. Todas las transacciones están protegidas.
+                </p>
+              </div>
+
+              <div className="bg-card border border-border rounded-lg p-8 text-center animate-fade-in hover:shadow-lg transition-shadow" style={{animationDelay: '0.2s'}}>
+                <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Award className="w-8 h-8 text-secondary" />
+                </div>
+                <h4 className="text-xl font-bold text-foreground mb-4">Precios</h4>
+                <p className="text-muted-foreground">
+                  Ofrecemos los precios más competitivos del mercado.
+                </p>
+              </div>
+
+              <div className="bg-card border border-border rounded-lg p-8 text-center animate-fade-in hover:shadow-lg transition-shadow" style={{animationDelay: '0.3s'}}>
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Clock className="w-8 h-8 text-primary" />
+                </div>
+                <h4 className="text-xl font-bold text-foreground mb-4">Soporte</h4>
+                <p className="text-muted-foreground">
+                  Siempre disponibles con ayuda rápida las 24 horas.
+                </p>
+              </div>
+
+              <div className="bg-card border border-border rounded-lg p-8 text-center animate-fade-in hover:shadow-lg transition-shadow" style={{animationDelay: '0.4s'}}>
+                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Users className="w-8 h-8 text-accent" />
+                </div>
+                <h4 className="text-xl font-bold text-foreground mb-4">Experiencia</h4>
+                <p className="text-muted-foreground">
+                  Rica experiencia en la industria y conocimiento en servicios gaming.
+                </p>
+              </div>
+
+              <div className="bg-card border border-border rounded-lg p-8 text-center animate-fade-in hover:shadow-lg transition-shadow" style={{animationDelay: '0.5s'}}>
+                <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Zap className="w-8 h-8 text-secondary" />
+                </div>
+                <h4 className="text-xl font-bold text-foreground mb-4">Calidad</h4>
+                <p className="text-muted-foreground">
+                  Siempre ofrecemos la más alta calidad en todos los productos.
                 </p>
               </div>
             </div>

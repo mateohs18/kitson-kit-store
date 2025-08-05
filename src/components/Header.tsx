@@ -14,7 +14,7 @@ export const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/20">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -25,37 +25,48 @@ export const Header = () => {
               className="w-10 h-10 rounded-full"
             />
             <div>
-              <h1 className="text-xl font-bold text-foreground">Kitson Kit</h1>
-              <p className="text-xs text-muted-foreground">Gaming Store</p>
+              <h1 className="text-xl font-bold text-foreground">KITSON KIT</h1>
+              <p className="text-xs text-accent uppercase tracking-wider">V2.0</p>
             </div>
           </div>
 
           {/* Navigation */}
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden md:flex items-center gap-8">
             <button 
               onClick={scrollToProducts}
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="text-muted-foreground hover:text-accent transition-colors text-sm font-medium uppercase tracking-wide"
             >
-              Productos
+              🎮 Fortnite
             </button>
             <button 
-              onClick={scrollToAbout}
-              className="text-muted-foreground hover:text-primary transition-colors"
+              onClick={scrollToProducts}
+              className="text-muted-foreground hover:text-accent transition-colors text-sm font-medium uppercase tracking-wide"
             >
-              Quienes Somos
+              ⛏️ Minecraft
+            </button>
+            <button 
+              onClick={scrollToProducts}
+              className="text-muted-foreground hover:text-accent transition-colors text-sm font-medium uppercase tracking-wide"
+            >
+              🔥 Free Fire
             </button>
             <button 
               onClick={scrollToContact}
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="text-muted-foreground hover:text-accent transition-colors text-sm font-medium uppercase tracking-wide"
             >
-              Contacto
+              📞 Contacto
             </button>
           </nav>
 
-          {/* CTA Button */}
-          <Button variant="gaming" size="sm" onClick={scrollToContact}>
-            Comprar Ahora
-          </Button>
+          {/* Auth Buttons */}
+          <div className="flex items-center gap-3">
+            <Button variant="outline" size="sm" className="hidden md:inline-flex">
+              Iniciar Sesión
+            </Button>
+            <Button variant="gaming" size="sm">
+              Registrarse
+            </Button>
+          </div>
         </div>
       </div>
     </header>
