@@ -126,14 +126,30 @@ const Index = () => {
       <Header />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
-        {/* Logo Shadow Effect */}
+        {/* Logo Shadow Effect with Light Rays */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-80 h-80 rounded-full opacity-20 bg-gradient-radial from-gray-300/40 via-gray-200/20 to-transparent">
-            <div className="w-full h-full rounded-full flex items-center justify-center bg-gradient-to-br from-gray-300/30 to-gray-400/20 shadow-2xl">
+          {/* Light Rays */}
+          <div className="absolute w-96 h-96 animate-spin" style={{ animationDuration: '20s' }}>
+            {[...Array(12)].map((_, i) => (
+              <div
+                key={i}
+                className="absolute w-2 h-32 bg-gradient-to-t from-yellow-400/30 via-yellow-300/20 to-transparent origin-bottom"
+                style={{
+                  transform: `rotate(${i * 30}deg) translateX(-50%)`,
+                  left: '50%',
+                  bottom: '50%',
+                }}
+              />
+            ))}
+          </div>
+          
+          {/* Shadow Circle */}
+          <div className="w-80 h-80 rounded-full opacity-30 bg-gradient-radial from-yellow-200/40 via-gray-200/20 to-transparent">
+            <div className="w-full h-full rounded-full flex items-center justify-center bg-gradient-to-br from-yellow-300/20 to-gray-400/20 shadow-2xl shadow-yellow-200/20">
               <img 
                 src="/lovable-uploads/3869feb0-7ccb-431c-95b7-53b04dbb7fdf.png" 
                 alt="Kitson Kit Logo Shadow" 
-                className="w-32 h-32 opacity-30 rounded-full"
+                className="w-32 h-32 opacity-40 rounded-full"
               />
             </div>
           </div>
