@@ -10,50 +10,66 @@ const freefireImage = "/lovable-uploads/2e7f57ec-2038-4990-b90a-f42ff5d2fe88.png
 const FreefirePage = () => {
   const freefireProducts = [
     {
-      title: "100 + 10 DIAMANTES",
+      title: "110 DIAMANTES",
       subtitle: "FREE FIRE",
-      description: "110 diamantes totales para Free Fire con entrega inmediata. Sin baneos ni problemas.",
-      price: "$5",
+      description: "110 diamantes para Free Fire con entrega inmediata. Sin baneos ni problemas.",
+      price: "🇨🇴 3.700 COP | 🇲🇽 18 MXN | 🇦🇷 1.190 ARS",
       image: freefireImage,
       category: "FREE FIRE"
     },
     {
-      title: "310 + 31 DIAMANTES",
+      title: "220 DIAMANTES",
       subtitle: "FREE FIRE",
-      description: "341 diamantes totales para Free Fire con entrega inmediata. Sin baneos ni problemas.",
-      price: "$15",
+      description: "220 diamantes para Free Fire con entrega inmediata. Sin baneos ni problemas.",
+      price: "🇨🇴 7.000 COP | 🇲🇽 36 MXN | 🇦🇷 2.218 ARS",
       image: freefireImage,
       category: "FREE FIRE"
     },
     {
-      title: "520 + 52 DIAMANTES",
+      title: "341 DIAMANTES",
       subtitle: "FREE FIRE",
-      description: "572 diamantes totales para Free Fire con entrega inmediata. Sin baneos ni problemas.",
-      price: "$25",
+      description: "341 diamantes para Free Fire con entrega inmediata. Sin baneos ni problemas.",
+      price: "🇨🇴 10.000 COP | 🇲🇽 48 MXN | 🇦🇷 3.200 ARS",
       image: freefireImage,
       category: "FREE FIRE"
     },
     {
-      title: "1060 + 106 DIAMANTES",
+      title: "572 DIAMANTES",
       subtitle: "FREE FIRE",
-      description: "1166 diamantes totales para Free Fire con entrega inmediata. Sin baneos ni problemas.",
-      price: "$50",
+      description: "572 diamantes para Free Fire con entrega inmediata. Sin baneos ni problemas.",
+      price: "🇨🇴 15.500 COP | 🇲🇽 73 MXN | 🇦🇷 4.920 ARS",
       image: freefireImage,
       category: "FREE FIRE"
     },
     {
-      title: "2180 + 218 DIAMANTES",
+      title: "1166 DIAMANTES",
       subtitle: "FREE FIRE",
-      description: "2398 diamantes totales para Free Fire con entrega inmediata. Sin baneos ni problemas.",
-      price: "$100",
+      description: "1166 diamantes para Free Fire con entrega inmediata. Sin baneos ni problemas.",
+      price: "🇨🇴 30.000 COP | 🇲🇽 145 MXN | 🇦🇷 9.500 ARS",
       image: freefireImage,
       category: "FREE FIRE"
     },
     {
-      title: "5600 + 560 DIAMANTES",
+      title: "2398 DIAMANTES",
       subtitle: "FREE FIRE",
-      description: "6160 diamantes totales para Free Fire con entrega inmediata. Sin baneos ni problemas.",
-      price: "$250",
+      description: "2398 diamantes para Free Fire con entrega inmediata. Sin baneos ni problemas.",
+      price: "🇨🇴 59.000 COP | 🇲🇽 294 MXN | 🇦🇷 18.960 ARS",
+      image: freefireImage,
+      category: "FREE FIRE"
+    },
+    {
+      title: "3564 DIAMANTES",
+      subtitle: "FREE FIRE",
+      description: "3564 diamantes para Free Fire con entrega inmediata. Sin baneos ni problemas.",
+      price: "🇨🇴 89.000 COP | 🇲🇽 417 MXN | 🇦🇷 28.159 ARS",
+      image: freefireImage,
+      category: "FREE FIRE"
+    },
+    {
+      title: "6160 DIAMANTES",
+      subtitle: "FREE FIRE",
+      description: "6160 diamantes para Free Fire con entrega inmediata. Sin baneos ni problemas.",
+      price: "🇨🇴 145.000 COP | 🇲🇽 750 MXN | 🇦🇷 45.900 ARS",
       image: freefireImage,
       category: "FREE FIRE"
     }
