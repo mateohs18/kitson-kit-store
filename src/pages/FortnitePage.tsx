@@ -5,7 +5,7 @@ import { ContactSection } from "@/components/ContactSection";
 import { ArrowLeft, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const fortniteImage = "/lovable-uploads/21320e0f-87f5-48a3-aedf-61ac568e15d9.png";
+const fortniteImage = "/lovable-uploads/deaf7a90-011e-4ebf-8f94-15b2606530db.png";
 
 const FortnitePage = () => {
   const fortniteProducts = [
@@ -52,7 +52,7 @@ const FortnitePage = () => {
           </div>
           
           <div className="text-center mb-16">
-            <img src={fortniteImage} alt="Fortnite" className="w-32 h-32 mx-auto mb-8 rounded-lg" />
+            <img src="/lovable-uploads/21320e0f-87f5-48a3-aedf-61ac568e15d9.png" alt="Fortnite" className="w-32 h-32 mx-auto mb-8 rounded-lg" />
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4">
               FORTNITE
             </h1>
