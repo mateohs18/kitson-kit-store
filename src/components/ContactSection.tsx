@@ -50,7 +50,7 @@ export const ContactSection = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground">Entrega Rápida</h3>
-                  <p className="text-muted-foreground text-sm">Recibe tus productos rapido, sin esperas de 24</p>
+                  <p className="text-muted-foreground text-sm">Recibe tus productos rápido, sin esperas de 24 horas</p>
                 </div>
               </div>
 
