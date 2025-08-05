@@ -143,10 +143,10 @@ const Index = () => {
           ))}
         </div>
         
-        <div className="relative z-10 container mx-auto px-4 text-center">
+        <div className="relative z-10 container mx-auto px-4 text-center pt-20 md:pt-16">
           <div className="max-w-4xl mx-auto animate-fade-in">
-            <div className="flex items-center justify-center gap-4 mb-6">
-              <img src="/lovable-uploads/3869feb0-7ccb-431c-95b7-53b04dbb7fdf.png" alt="Kitson Kit Logo" className="w-20 h-20 md:w-24 md:h-24 rounded-full animate-float" />
+            <div className="flex items-center justify-center gap-4 mb-6 mt-8 md:mt-0">
+              <img src="/lovable-uploads/3869feb0-7ccb-431c-95b7-53b04dbb7fdf.png" alt="Kitson Kit Logo" className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full animate-float" />
             </div>
             
             <h1 className="text-6xl md:text-8xl font-bold text-foreground mb-4">
