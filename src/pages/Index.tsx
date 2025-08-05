@@ -125,11 +125,18 @@ const Index = () => {
       {/* Header */}
       <Header />
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-        backgroundImage: `url(${heroImage})`
-      }}>
-          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-background/95"></div>
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
+        {/* Logo Shadow Effect */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-80 h-80 rounded-full opacity-20 bg-gradient-radial from-gray-300/40 via-gray-200/20 to-transparent">
+            <div className="w-full h-full rounded-full flex items-center justify-center bg-gradient-to-br from-gray-300/30 to-gray-400/20 shadow-2xl">
+              <img 
+                src="/lovable-uploads/3869feb0-7ccb-431c-95b7-53b04dbb7fdf.png" 
+                alt="Kitson Kit Logo Shadow" 
+                className="w-32 h-32 opacity-30 rounded-full"
+              />
+            </div>
+          </div>
         </div>
         
         <div className="relative z-10 container mx-auto px-4 text-center">
