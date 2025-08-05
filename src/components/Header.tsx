@@ -30,16 +30,16 @@ export const Header = () => {
           </div>
 
           {/* Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="flex items-center gap-4 md:gap-8">
             <button 
               onClick={scrollToAbout}
-              className="text-muted-foreground hover:text-accent transition-colors text-sm font-medium uppercase tracking-wide"
+              className="text-muted-foreground hover:text-accent transition-colors text-xs md:text-sm font-medium uppercase tracking-wide"
             >
               Quienes Somos
             </button>
             <button 
               onClick={scrollToContact}
-              className="text-muted-foreground hover:text-accent transition-colors text-sm font-medium uppercase tracking-wide"
+              className="text-muted-foreground hover:text-accent transition-colors text-xs md:text-sm font-medium uppercase tracking-wide"
             >
               Contacto
             </button>
