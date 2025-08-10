@@ -13,7 +13,7 @@ const MinecraftPage = () => {
       title: "MINECOINS",
       subtitle: "Moneda oficial de Minecraft",
       description: "Minecoins oficiales para comprar contenido en Minecraft Marketplace. Entrega rápida y segura.",
-      price: "Desde $10",
+      price: "Varia",
       image: minecraftImage,
       category: "MINECRAFT"
     },
@@ -21,7 +21,7 @@ const MinecraftPage = () => {
       title: "MINECRAFT XBOX",
       subtitle: "Game Pass Ultimate",
       description: "Acceso completo a Minecraft Xbox con Game Pass Ultimate incluido. Compatible con Xbox Series X/S, Xbox One y PC Windows.",
-      price: "Desde $20",
+      price: "$12",
       image: minecraftImage,
       category: "MINECRAFT"
     },
@@ -29,7 +29,7 @@ const MinecraftPage = () => {
       title: "MINECRAFT PC",
       subtitle: "Cuenta nueva",
       description: "Cuenta nueva de Minecraft Java Edition para PC. Acceso completo y permanente al juego con tu propia cuenta.",
-      price: "Desde $30",
+      price: "$12",
       image: minecraftImage,
       category: "MINECRAFT"
     }
