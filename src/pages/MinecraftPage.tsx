@@ -19,8 +19,8 @@ const MinecraftPage = () => {
     },
     {
       title: "MINECRAFT XBOX",
-      subtitle: "Game Pass Ultimate",
-      description: "Acceso completo a Minecraft Xbox con Game Pass Ultimate incluido. Compatible con Xbox Series X/S, Xbox One y PC Windows.",
+      subtitle: "Licencia Xbox",
+      description: "Licencia completa de Minecraft Xbox. Compatible con Xbox Series X/S, Xbox One y PC Windows.",
       price: "$12",
       image: minecraftImage,
       category: "MINECRAFT"
@@ -57,7 +57,7 @@ const MinecraftPage = () => {
               MINECRAFT
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Minecoins, cuentas y Game Pass
+              Minecoins y cuentas de Minecraft
             </p>
           </div>
 
