@@ -40,7 +40,7 @@ export const ProductCard = ({ title, subtitle, description, price, image, catego
             src={image} 
             alt={title}
             className="w-full h-48 object-cover object-center transition-transform duration-300 group-hover:scale-110"
-            style={{ objectPosition: 'center', transform: 'scale(1.1)' }}
+            style={{ objectPosition: 'center top', transform: 'scale(1.1)' }}
           />
           <div className="absolute top-3 left-3 bg-primary text-primary-foreground px-2 py-1 rounded-md text-xs font-semibold">
             {category}
