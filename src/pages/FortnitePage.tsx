@@ -52,7 +52,7 @@ const FortnitePage = () => {
           </div>
           
           <div className="text-center mb-16">
-            <img src="/lovable-uploads/21320e0f-87f5-48a3-aedf-61ac568e15d9.png" alt="Fortnite" className="w-32 h-32 mx-auto mb-8 rounded-lg" />
+            <img src="/lovable-uploads/4de401bc-3b97-4e1c-8f43-5a028fe8d1ec.png" alt="Fortnite" className="w-32 h-32 mx-auto mb-8 rounded-lg" />
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4">
               FORTNITE
             </h1>
