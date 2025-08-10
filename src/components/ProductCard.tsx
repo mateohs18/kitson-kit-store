@@ -45,7 +45,7 @@ export const ProductCard = ({ title, subtitle, description, price, image, catego
             {category}
           </div>
           <div className="absolute bottom-3 right-3 bg-accent text-accent-foreground px-2 py-1 rounded-md text-sm font-bold">
-            {price}
+            {price === "Varia" ? "Varía" : price}
           </div>
         </div>
         
