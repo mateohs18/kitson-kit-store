@@ -6,7 +6,7 @@ import { CountdownTimer } from "@/components/CountdownTimer";
 import { Shield, Zap, Users, Star, Award, Clock } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-const fortniteImage = "/lovable-uploads/21320e0f-87f5-48a3-aedf-61ac568e15d9.png";
+const fortniteImage = "/lovable-uploads/4de401bc-3b97-4e1c-8f43-5a028fe8d1ec.png";
 const freefireImage = "/lovable-uploads/bdce0646-48a6-4b27-a7bc-42ca95f856b7.png";
 const minecraftImage = "/lovable-uploads/722d514e-f2e2-4266-9825-97d3b17af36b.png";
 const Index = () => {
