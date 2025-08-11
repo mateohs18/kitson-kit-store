@@ -165,7 +165,7 @@ const Index = () => {
                 </Button>
               </Link>
               <Link to="/minecraft">
-                <Button variant="gaming" size="xl" className="min-w-[200px] text-lg">
+                <Button variant="secondary-glow" size="xl" className="min-w-[200px] text-lg">
                   MINECRAFT
                 </Button>
               </Link>
