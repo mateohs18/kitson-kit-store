@@ -20,7 +20,7 @@ const FortnitePage = () => {
     {
       title: "CLUB DE FORTNITE",
       subtitle: "Cuenta sin Error",
-      description: "Cuenta premium sin errores, acceso completo a todos los beneficios del club. La opción más segura.",
+      description: "Acceso completo al pase de batalla y contenido exclusivo. Método seguro sin riesgo para tu cuenta principal.",
       price: "$4 USD • $85 MXN • 18 SOL • $19.000 COP",
       image: fortniteImage,
       category: "FORTNITE"
