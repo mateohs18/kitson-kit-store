@@ -4,13 +4,28 @@ import { ProductCard } from "@/components/ProductCard";
 import { ContactSection } from "@/components/ContactSection";
 import { CountdownTimer } from "@/components/CountdownTimer";
 import { Shield, Zap, Users, Star, Award, Clock } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 const fortniteImage = "/lovable-uploads/4de401bc-3b97-4e1c-8f43-5a028fe8d1ec.png";
 const freefireImage = "/lovable-uploads/bdce0646-48a6-4b27-a7bc-42ca95f856b7.png";
 const minecraftImage = "/lovable-uploads/722d514e-f2e2-4266-9825-97d3b17af36b.png";
 const Index = () => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  
+  // Preload critical images
+  useEffect(() => {
+    const preloadImages = [
+      "/lovable-uploads/3869feb0-7ccb-431c-95b7-53b04dbb7fdf.png", // Logo
+      fortniteImage,
+      freefireImage,
+      minecraftImage
+    ];
+    
+    preloadImages.forEach(src => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
   const categories = [{
     name: "FORTNITE",
     image: fortniteImage,
@@ -140,7 +155,7 @@ const Index = () => {
         <div className="relative z-10 container mx-auto px-4 text-center pt-20 md:pt-16">
           <div className="max-w-4xl mx-auto animate-fade-in">
             <div className="flex items-center justify-center gap-4 mb-6 mt-8 md:mt-0">
-              <img src="/lovable-uploads/3869feb0-7ccb-431c-95b7-53b04dbb7fdf.png" alt="Kitson Kit Logo" className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full animate-float" loading="eager" />
+              <img src="/lovable-uploads/3869feb0-7ccb-431c-95b7-53b04dbb7fdf.png" alt="Kitson Kit Logo" className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full animate-float" loading="eager" fetchPriority="high" />
             </div>
             
             <h1 className="text-6xl md:text-8xl font-bold text-foreground mb-4">
@@ -194,7 +209,7 @@ const Index = () => {
                 animationDelay: `${index * 0.1}s`
               }}>
                     <div className="relative overflow-hidden">
-                      <img src={category.image} alt={category.name} className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" loading="lazy" />
+                      <img src={category.image} alt={category.name} className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" loading="lazy" decoding="async" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                       <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                         <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">
@@ -320,7 +335,7 @@ const Index = () => {
       <footer className="bg-muted py-12">
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-3 mb-8">
-            <img src="/lovable-uploads/3869feb0-7ccb-431c-95b7-53b04dbb7fdf.png" alt="Kitson Kit Logo" className="w-12 h-12 rounded-full" loading="lazy" />
+            <img src="/lovable-uploads/3869feb0-7ccb-431c-95b7-53b04dbb7fdf.png" alt="Kitson Kit Logo" className="w-12 h-12 rounded-full" loading="lazy" decoding="async" />
             <div>
               <h3 className="text-2xl font-bold text-foreground">Kitson Kit</h3>
               <p className="text-muted-foreground">
