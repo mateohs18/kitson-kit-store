@@ -29,7 +29,7 @@ const Index = () => {
   const categories = [{
     name: "FORTNITE",
     image: fortniteImage,
-    description: "V-Bucks, Club de Fortnite y objetos exclusivos"
+    description: "Club de Fortnite y objetos vía regalo"
   }, {
     name: "FREE FIRE",
     image: freefireImage,
@@ -37,14 +37,14 @@ const Index = () => {
   }, {
     name: "MINECRAFT",
     image: minecraftImage,
-    description: "Minecoins, cuentas y Game Pass"
+    description: "Minecoins y cuentas"
   }];
   const products = [
   // FORTNITE Category
   {
     title: "CLUB DE FORTNITE",
     subtitle: "Cuenta con Error",
-    description: "Acceso completo al pase de batalla y contenido exclusivo. Método seguro sin riesgo para tu cuenta principal.",
+    description: "Acceso completo al pase de batalla. Método seguro sin riesgo para tu cuenta principal.",
     price: "$5 USD • $105 MXN • 24 SOL • $24.000 COP",
     image: fortniteImage,
     category: "FORTNITE"
@@ -117,8 +117,8 @@ const Index = () => {
     category: "MINECRAFT"
   }, {
     title: "MINECRAFT XBOX",
-    subtitle: "Game Pass Ultimate",
-    description: "Acceso completo a Minecraft Xbox con Game Pass Ultimate incluido. Compatible con Xbox Series X/S, Xbox One y PC Windows.",
+    subtitle: "Cuenta nueva",
+    description: "Cuenta nueva de Minecraft Xbox. Compatible con Xbox Series X/S, Xbox One y PC Windows.",
     price: "Desde $20",
     image: minecraftImage,
     category: "MINECRAFT"
