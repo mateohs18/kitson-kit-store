@@ -57,7 +57,7 @@ const FortnitePage = () => {
               FORTNITE
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              V-Bucks, Club de Fortnite y objetos exclusivos
+              Club de Fortnite y objetos vía regalo
             </p>
           </div>
 
