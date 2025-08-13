@@ -28,7 +28,7 @@ const MinecraftPage = () => {
     {
       title: "MINECRAFT PC",
       subtitle: "Cuenta nueva",
-      description: "Cuenta nueva de Minecraft Java Edition para PC. Acceso completo y permanente al juego con tu propia cuenta.",
+      description: "Cuenta nueva de Minecraft Java & Bedrock Edition para PC. Acceso completo y permanente al juego",
       price: "$12",
       image: minecraftImage,
       category: "MINECRAFT"
