@@ -21,7 +21,7 @@ const MinecraftPage = () => {
       title: "MINECRAFT XBOX",
       subtitle: "Licencia Xbox",
       description: "Licencia completa de Minecraft Xbox. Compatible con Xbox Series X/S y Xbox One.",
-      price: "$12",
+      price: "$12 USD",
       image: minecraftImage,
       category: "MINECRAFT"
     },
@@ -29,7 +29,7 @@ const MinecraftPage = () => {
       title: "MINECRAFT PC",
       subtitle: "Cuenta nueva",
       description: "Cuenta nueva de Minecraft Java & Bedrock Edition para PC. Acceso completo y permanente al juego.",
-      price: "$12",
+      price: "$12 USD",
       image: minecraftImage,
       category: "MINECRAFT"
     }
