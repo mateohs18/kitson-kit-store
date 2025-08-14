@@ -68,7 +68,7 @@ const FortnitePage = () => {
               ¿Qué es el Error de Región?
             </h4>
             <p className="text-muted-foreground leading-relaxed">
-              Es un error que aparece si jugaste en Xbox alguna vez. <strong className="text-foreground">Nosotros hacemos la recarga directa por Xbox</strong>, 
+              Es un error que aparece si jugaste en Xbox alguna vez. <strong className="text-foreground">Nosotros hacemos la recarga directa por Xbox</strong>,
               saltando completamente ese error. <span className="text-primary font-medium">Sin riesgo ni métodos raros</span> - 
               proceso 100% seguro y confiable.
             </p>

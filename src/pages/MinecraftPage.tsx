@@ -20,7 +20,7 @@ const MinecraftPage = () => {
     {
       title: "MINECRAFT XBOX",
       subtitle: "Licencia Xbox",
-      description: "Licencia completa de Minecraft Xbox. Compatible con Xbox Series X/S y Xbox One.",
+      description: "Licencia completa de Minecraft para Xbox. Compatible con Xbox Series X/S y Xbox One.",
       price: "$12 USD",
       image: minecraftImage,
       category: "MINECRAFT"

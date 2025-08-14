@@ -118,14 +118,14 @@ const Index = () => {
   }, {
     title: "MINECRAFT XBOX",
     subtitle: "Cuenta nueva",
-    description: "Cuenta nueva de Minecraft Xbox. Compatible con Xbox Series X/S, Xbox One y PC Windows.",
+    description: "Cuenta nueva de Minecraft para Xbox. Compatible con Xbox Series X/S, Xbox One y PC Windows.",
     price: "Desde $20",
     image: minecraftImage,
     category: "MINECRAFT"
   }, {
     title: "MINECRAFT PC",
     subtitle: "Cuenta nueva",
-    description: "Cuenta nueva de Minecraft Java Edition para PC. Acceso completo y permanente al juego con tu propia cuenta.",
+      description: "Cuenta nueva de Minecraft Java Edition para PC. Acceso completo y permanente al juego con tu propia cuenta.",
     price: "Desde $30",
     image: minecraftImage,
     category: "MINECRAFT"
