@@ -27,7 +27,7 @@ export const ContactSection = () => {
             ¿Listo para conseguir tus productos favoritos?
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Contáctanos por tu plataforma favorita y obtén atención personalizada
+            Contáctanos por tu red social favorita y obtén atención personalizada
           </p>
         </div>
 
