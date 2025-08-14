@@ -232,7 +232,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Quienes Somos
+              Quiénes Somos
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Bienvenido a Kitson Kit, tu centro de confianza para ¡Juegos, Servicios y Suscripciones! 🎮
@@ -260,7 +260,7 @@ const Index = () => {
                 </div>
                 <h4 className="text-xl font-bold text-foreground mb-4">Profesionalismo</h4>
                 <p className="text-muted-foreground">
-                  Servicios de calidad con atención al detalle
+                  Servicios de calidad con atención al detalle.
                 </p>
               </div>
 
@@ -339,7 +339,7 @@ const Index = () => {
             <div>
               <h3 className="text-2xl font-bold text-foreground">Kitson Kit</h3>
               <p className="text-muted-foreground">
-                Tu tienda de confianza para productos digitales gaming
+                Tu tienda de confianza para productos digitales gaming.
               </p>
             </div>
           </div>

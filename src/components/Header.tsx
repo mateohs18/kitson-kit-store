@@ -34,7 +34,7 @@ export const Header = () => {
               onClick={scrollToAbout}
               className="text-muted-foreground hover:text-accent transition-colors text-xs md:text-sm font-medium uppercase tracking-wide"
             >
-              Quienes Somos
+              Quiénes Somos
             </button>
             <button 
               onClick={scrollToContact}

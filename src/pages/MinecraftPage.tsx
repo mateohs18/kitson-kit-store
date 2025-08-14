@@ -13,7 +13,7 @@ const MinecraftPage = () => {
       title: "MINECOINS",
       subtitle: "Moneda oficial de Minecraft",
       description: "Minecoins oficiales para comprar contenido en Minecraft Marketplace. Entrega rápida y segura.",
-      price: "Varia",
+      price: "Varía",
       image: minecraftImage,
       category: "MINECRAFT"
     },
